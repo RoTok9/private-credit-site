@@ -59,6 +59,15 @@ async function loadData() {
 // ============================================================
 function renderIndexCharts(d) {
 
+  // Live PCDR stat — populated from fitch_pcdr block in market-data.json
+  const pcdrVal = document.getElementById('pcdr-value');
+  const pcdrLbl = document.getElementById('pcdr-label');
+  if (pcdrVal && pcdrLbl && d.fitch_pcdr) {
+    pcdrVal.textContent = d.fitch_pcdr.rate + '%';
+    pcdrLbl.textContent = 'Fitch PCDR (' + d.fitch_pcdr.period + ')';
+    pcdrLbl.title = 'Source: ' + d.fitch_pcdr.source_url + ' | Fetched: ' + d.fitch_pcdr.fetched;
+  }
+
   // Top 15 managers bar
   const top15 = d.managers.slice(0, 15);
   const mCtx = document.getElementById('managerPreviewChart');
