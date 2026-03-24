@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vol. 3 — Credit Ratings Deep-Dive | Private Credit Index</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">PCI<span class="accent">.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="analysis.html" class="active">Research</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="vol-tabs">
+    <div class="vol-tabs-inner">
+      <a href="analysis.html"        class="vol-tab">Vol. 1 — Market Overview</a>
+      <a href="vol2.html"            class="vol-tab">Vol. 2 — Firm Deep-Dives</a>
+      <a href="vol2-supplement.html" class="vol-tab">Vol. 2 Supp — PIK &amp; Roll-Ups</a>
+      <a href="vol25.html"           class="vol-tab">Vol. 2.5 — Roll-Up Audit</a>
+      <a href="vol3.html"            class="vol-tab active">Vol. 3 — Credit Ratings</a>
+    </div>
+  </div>
+
+  <div class="vol-hero">
+    <div class="container vol-hero-inner">
+      <span class="vol-badge">Vol. 3 — March 2026</span>
+      <h1>Credit Ratings Deep-Dive</h1>
+      <p>24-entity universe across BDCs, interval funds, and credit REITs. Rating agency divergence mapped across Moody's, S&amp;P, Fitch, and KBRA. Shadow NAV analysis reveals estimated overstatement of $6.2B across the top 12 vehicles. HY OAS at 312 bps and LSTA YTD -2.48% signal a deteriorating credit environment.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:2.5rem">
+    <nav class="section-jump">
+      <span class="section-jump-label">Jump to</span>
+      <a href="#master-index">Master Index</a>
+      <a href="#agency-divergence">Agency Divergence</a>
+      <a href="#shadow-nav">Shadow NAV</a>
+      <a href="#loan-pricing">Loan Pricing</a>
+      <a href="#dg-odds">Downgrade Odds</a>
+      <a href="#migration">Rating Migration</a>
+      <a href="#pbook">P/Book Scatter</a>
+      <a href="#macro">Macro Dashboard</a>
+      <a href="#dashboard">Summary</a>
+    </nav>
+  </div>
+
+  <section class="section" id="master-index">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Vol. 3 — Credit Ratings Deep-Dive</p>
+        <h2>Agency Ratings, Shadow NAV &amp; Secondary Market Stress</h2>
+      </div>
+      <div class="insight-box" style="margin-bottom:2rem">
+        <span class="insight-label">Key Findings</span>
+        <p>CCLFX (55%) and PSEC (50%) carry the highest 12-month downgrade probability. FSK trades at 0.48x P/Book — the deepest discount in the universe. Shadow NAV analysis suggests $6.2B total overstatement across 12 vehicles, with BCRED's reported $24.79 NAV estimated at $22.50 fair value (-9.2%). Blackstone's 5Y CDS has doubled to 100 bps; unrealized losses now $125.6B vs. $87.1B at FY2024.</p>
+      </div>
+
+      <p class="img-group-label">Master Ratings Index — 24-Entity Universe</p>
+      <div class="img-grid">
+        <a href="images/PC_V3_Page1_MasterRatingsIndex.png"><img src="images/PC_V3_Page1_MasterRatingsIndex.png" alt="Master Ratings Index — All 4 Agencies, P/Book, DG Odds, Composite Score"></a>
+      </div>
+
+      <p class="img-group-label" id="agency-divergence">Rating Agency Divergence</p>
+      <div class="img-grid">
+        <a href="images/PC_V3_Page2_AgencyDivergence.png"><img src="images/PC_V3_Page2_AgencyDivergence.png" alt="Agency Divergence Heatmap — Where Moody's, S&P, Fitch &amp; KBRA Disagree"></a>
+      </div>
+
+      <p class="img-group-label" id="shadow-nav">Shadow NAV Analysis</p>
+      <div class="img-grid">
+        <a href="images/PC_V3_ShadowNAV.png"><img src="images/PC_V3_ShadowNAV.png" alt="Shadow NAV vs. Reported NAV — Top 12 Vehicles by Overstatement"></a>
+      </div>
+
+      <p class="img-group-label" id="loan-pricing">Secondary Market Loan Pricing</p>
+      <div class="img-grid">
+        <a href="images/PC_V3_SecondaryLoanPricing.png"><img src="images/PC_V3_SecondaryLoanPricing.png" alt="Secondary Market Loan Pricing — 20 Key Portfolio Holdings by Price Band"></a>
+      </div>
+
+      <p class="img-group-label" id="dg-odds">12-Month Downgrade Probability</p>
+      <div class="img-grid">
+        <a href="images/PC_V3_DowngradeProbability.png"><img src="images/PC_V3_DowngradeProbability.png" alt="Downgrade Probability by Entity — CDS-Implied + Analyst Consensus"></a>
+      </div>
+
+      <p class="img-group-label" id="migration">Rating Migration History</p>
+      <div class="img-grid">
+        <a href="images/PC_V3_RatingMigration.png"><img src="images/PC_V3_RatingMigration.png" alt="Rating Migration Q1 2022 to Q1 2026 — Upgrades vs. Downgrades"></a>
+      </div>
+
+      <p class="img-group-label" id="pbook">P/Book vs. NAV Discount</p>
+      <div class="img-grid">
+        <a href="images/PC_V3_PBook_Scatter.png"><img src="images/PC_V3_PBook_Scatter.png" alt="P/Book vs. NAV Discount Scatter — Colored by Rating Tier"></a>
+      </div>
+
+      <p class="img-group-label" id="macro">Macro Stress Dashboard</p>
+      <div class="img-grid">
+        <a href="images/PC_V3_MacroDashboard.png"><img src="images/PC_V3_MacroDashboard.png" alt="Macro Stress Indicators — HY OAS, LSTA, BX CDS, Unrealized Losses"></a>
+      </div>
+
+      <p class="img-group-label" id="dashboard">Summary Dashboard</p>
+      <div class="img-grid">
+        <a href="images/PC_V3_Dashboard.png"><img src="images/PC_V3_Dashboard.png" alt="Vol 3 — Summary Dashboard"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="nav-logo">PCI<span class="accent">.</span></span>
+      <p>Private Credit Index — Vol. 1–3 &mdash; Independent Research, March 2026</p>
+      <p class="footer-note">Sources: Moody's | S&amp;P Global | Fitch | KBRA | Bloomberg LSRC | Bloomberg Finance | Blackstone FY2025 10-K | LSTA | Federal Reserve</p>
+    </div>
+  </footer>
+
+  <a href="#" id="back-to-top" title="Back to top">&#8679;</a>
+
+  <div class="lb-overlay" id="lb-overlay">
+    <button class="lb-close" id="lb-close">&times;</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+
+  <script src="js/vol-nav.js"></script>
+</body>
+</html>

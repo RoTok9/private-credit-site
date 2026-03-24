@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Analysis — Private Credit Index Vol. 1</title>
+  <title>Vol. 1 — Market Overview | Private Credit Index</title>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -16,30 +16,53 @@
       <div class="nav-logo">PCI<span class="accent">.</span></div>
       <ul class="nav-links">
         <li><a href="index.html">Overview</a></li>
-        <li><a href="analysis.html" class="active">Analysis</a></li>
+        <li><a href="analysis.html" class="active">Research</a></li>
         <li><a href="methodology.html">Methodology</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="page-header">
-    <div class="container">
-      <p class="section-eyebrow">Vol. 1 — March 2026</p>
-      <h1>Market Analysis</h1>
-      <p class="page-header-sub">Top 40 private credit managers, 20 BDC ratings, sector exposure, leverage, default dynamics, and geographic distribution. Data sourced from PDI 200, S&P Global, Moody's, Fitch, KBRA, BIS, IMF, and Federal Reserve.</p>
+  <div class="vol-tabs">
+    <div class="vol-tabs-inner">
+      <a href="analysis.html"       class="vol-tab active">Vol. 1 — Market Overview</a>
+      <a href="vol2.html"           class="vol-tab">Vol. 2 — Firm Deep-Dives</a>
+      <a href="vol2-supplement.html" class="vol-tab">Vol. 2 Supp — PIK &amp; Roll-Ups</a>
+      <a href="vol25.html"          class="vol-tab">Vol. 2.5 — Roll-Up Audit</a>
+      <a href="vol3.html"           class="vol-tab">Vol. 3 — Credit Ratings</a>
     </div>
   </div>
 
-  <!-- SECTION 1: TOP MANAGERS -->
-  <section class="section">
+  <div class="vol-hero">
+    <div class="container vol-hero-inner">
+      <span class="vol-badge">Vol. 1 — March 2026</span>
+      <h1>Market Overview</h1>
+      <p>Top 40 private credit managers, 20 BDC ratings, sector exposure, leverage, default dynamics, and geographic distribution. Data sourced from PDI 200, S&P Global, Moody's, Fitch, KBRA, BIS, IMF, and Federal Reserve.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:2.5rem">
+    <nav class="section-jump">
+      <span class="section-jump-label">Jump to</span>
+      <a href="#managers">Top Managers</a>
+      <a href="#bdc-ratings">BDC Ratings</a>
+      <a href="#sector">Sector Exposure</a>
+      <a href="#defaults">Default Rates</a>
+      <a href="#leverage">Leverage</a>
+      <a href="#geography">Geography</a>
+      <a href="#risk-matrix">Risk Matrix</a>
+      <a href="#static-exports">Static Exports</a>
+    </nav>
+  </div>
+
+  <section class="section" id="managers">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Section 01 — Visuals 1 & 2</p>
+        <p class="section-eyebrow">Section 01 — Visuals 1 &amp; 2</p>
         <h2>Top Private Credit Managers</h2>
       </div>
       <div class="full-chart-card">
         <h4>Top 15 Managers — AUM Ranking</h4>
-        <p class="chart-sub">Private credit AUM in USD billions | Sources: PDI 200, company filings, S&P Global (2025)</p>
+        <p class="chart-sub">Private credit AUM in USD billions | Sources: PDI 200, company filings, S&amp;P Global (2025)</p>
         <canvas id="managersBarChart"></canvas>
       </div>
       <div class="insight-box" style="margin-top:1.5rem">
@@ -60,12 +83,8 @@
         <table class="data-table" id="managers-table">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Firm</th>
-              <th>HQ</th>
-              <th>PC AUM ($B)</th>
-              <th>Primary Strategy</th>
-              <th>Geography</th>
+              <th>#</th><th>Firm</th><th>HQ</th><th>PC AUM ($B)</th>
+              <th>Primary Strategy</th><th>Geography</th>
             </tr>
           </thead>
           <tbody id="managers-tbody"></tbody>
@@ -74,12 +93,11 @@
     </div>
   </section>
 
-  <!-- SECTION 2: BDC RATINGS -->
-  <section class="section alt-bg">
+  <section class="section alt-bg" id="bdc-ratings">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Section 02 — Visuals 3, 4 & 5</p>
-        <h2>BDC Credit Ratings & Risk</h2>
+        <p class="section-eyebrow">Section 02 — Visuals 3, 4 &amp; 5</p>
+        <h2>BDC Credit Ratings &amp; Risk</h2>
       </div>
       <div class="two-col">
         <div class="full-chart-card">
@@ -93,10 +111,9 @@
           <canvas id="navScatterChart"></canvas>
         </div>
       </div>
-      <!-- Ratings heatmap -->
       <div class="data-table-wrap" style="margin-top:1.5rem">
         <h4>BDC Credit Ratings Heatmap by Agency</h4>
-        <p class="chart-sub" style="margin-bottom:1rem">Investment grade = BBB-/Baa3 and above &nbsp;|&nbsp; NR = Not Rated &nbsp;|&nbsp; Sources: Moody's, S&P, Fitch, KBRA (2024–2026)</p>
+        <p class="chart-sub" style="margin-bottom:1rem">Investment grade = BBB-/Baa3 and above &nbsp;|&nbsp; NR = Not Rated &nbsp;|&nbsp; Sources: Moody's, S&amp;P, Fitch, KBRA (2024–2026)</p>
         <div id="ratings-heatmap"></div>
       </div>
       <div class="data-table-wrap" style="margin-top:1.5rem">
@@ -104,17 +121,10 @@
         <table class="data-table" id="bdcs-table">
           <thead>
             <tr>
-              <th>Ticker</th>
-              <th>BDC Name</th>
-              <th>Manager</th>
-              <th>Net Assets ($B)</th>
-              <th>Mkt Cap ($B)</th>
-              <th>Moody's</th>
-              <th>S&P</th>
-              <th>Fitch</th>
-              <th>KBRA</th>
-              <th>Non-Accrual</th>
-              <th>Risk Tier</th>
+              <th>Ticker</th><th>BDC Name</th><th>Manager</th>
+              <th>Net Assets ($B)</th><th>Mkt Cap ($B)</th>
+              <th>Moody's</th><th>S&amp;P</th><th>Fitch</th><th>KBRA</th>
+              <th>Non-Accrual</th><th>Risk Tier</th>
             </tr>
           </thead>
           <tbody id="bdcs-tbody"></tbody>
@@ -123,8 +133,7 @@
     </div>
   </section>
 
-  <!-- SECTION 3: SECTOR -->
-  <section class="section">
+  <section class="section" id="sector">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Section 03 — Visual 6</p>
@@ -133,17 +142,15 @@
       <div class="two-col">
         <div class="full-chart-card">
           <h4>Portfolio Sector Allocation</h4>
-          <p class="chart-sub">Estimated portfolio-weighted sector shares | Sources: S&P Global, Fed FEDS Notes, BIS, Prime Buchholz (2025)</p>
+          <p class="chart-sub">Estimated portfolio-weighted sector shares | Sources: S&amp;P Global, Fed FEDS Notes, BIS, Prime Buchholz (2025)</p>
           <canvas id="sectorDonutChart"></canvas>
         </div>
         <div class="full-chart-card">
           <h4>Sector Risk Summary</h4>
-          <p class="chart-sub">Known default rates & risk classification by sector</p>
+          <p class="chart-sub">Known default rates &amp; risk classification by sector</p>
           <div id="sector-risk-table-wrap">
             <table class="data-table" id="sector-risk-table">
-              <thead>
-                <tr><th>Sector</th><th>Share (%)</th><th>Default Rate</th><th>Risk Level</th></tr>
-              </thead>
+              <thead><tr><th>Sector</th><th>Share (%)</th><th>Default Rate</th><th>Risk Level</th></tr></thead>
               <tbody id="sector-tbody"></tbody>
             </table>
           </div>
@@ -152,16 +159,15 @@
     </div>
   </section>
 
-  <!-- SECTION 4: DEFAULT RATES -->
-  <section class="section alt-bg">
+  <section class="section alt-bg" id="defaults">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Section 04 — Visuals 7 & 8</p>
-        <h2>Default Rates & Event Types</h2>
+        <p class="section-eyebrow">Section 04 — Visuals 7 &amp; 8</p>
+        <h2>Default Rates &amp; Event Types</h2>
       </div>
       <div class="two-col">
         <div class="full-chart-card">
-          <h4>Default & Non-Accrual Rates</h4>
+          <h4>Default &amp; Non-Accrual Rates</h4>
           <p class="chart-sub">January 2026 | Fitch PCDR vs. sector and BDC-level rates | Sources: Fitch, Preqin, company filings</p>
           <canvas id="defaultRatesChart"></canvas>
         </div>
@@ -178,8 +184,7 @@
     </div>
   </section>
 
-  <!-- SECTION 5: LEVERAGE -->
-  <section class="section">
+  <section class="section" id="leverage">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Section 05 — Visual 9</p>
@@ -187,7 +192,7 @@
       </div>
       <div class="full-chart-card">
         <h4>Leverage: Private Credit vs. Public Markets</h4>
-        <p class="chart-sub">Debt / EBITDA ratios by instrument type (2024) | Sources: PGIM Sep-2024, S&P Global, McKinsey Feb-2025</p>
+        <p class="chart-sub">Debt / EBITDA ratios by instrument type (2024) | Sources: PGIM Sep-2024, S&amp;P Global, McKinsey Feb-2025</p>
         <canvas id="leverageChart"></canvas>
       </div>
       <div class="insight-box" style="margin-top:1.5rem">
@@ -197,8 +202,7 @@
     </div>
   </section>
 
-  <!-- SECTION 6: GEOGRAPHY -->
-  <section class="section alt-bg">
+  <section class="section alt-bg" id="geography">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Section 06 — Visual 10</p>
@@ -219,8 +223,7 @@
     </div>
   </section>
 
-  <!-- SECTION 7: BDC RISK MATRIX -->
-  <section class="section">
+  <section class="section" id="risk-matrix">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Section 07 — Visual 11</p>
@@ -228,7 +231,7 @@
       </div>
       <div class="full-chart-card">
         <h4>BDC Risk Matrix: Net Assets vs. Non-Accrual Rate</h4>
-        <p class="chart-sub">Bubble size = market cap | Color = management type | Sources: Moody's, S&P, KBRA, company filings (2024–2026)</p>
+        <p class="chart-sub">Bubble size = market cap | Color = management type | Sources: Moody's, S&amp;P, KBRA, company filings (2024–2026)</p>
         <canvas id="riskMatrixChart"></canvas>
       </div>
       <div class="insight-box" style="margin-top:1.5rem">
@@ -238,127 +241,36 @@
     </div>
   </section>
 
-  <!-- SECTION 8: VOL. 1 STATIC EXPORTS -->
-  <section class="section alt-bg">
+  <section class="section alt-bg" id="static-exports">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Vol. 1 — Full Static Exports</p>
         <h2>Index Tables, Heatmaps &amp; Charts</h2>
       </div>
-      <p class="chart-sub" style="margin-bottom:2rem">High-resolution PNG exports generated from the R pipeline. Click any image to view full size.</p>
+      <p class="chart-sub" style="margin-bottom:2rem">High-resolution PNG exports from the R pipeline. Click any image to open full-screen.</p>
 
-      <h4 style="color:var(--accent);margin-bottom:1rem">Index Tables</h4>
+      <p class="img-group-label">Index Tables</p>
       <div class="img-grid">
-        <a href="images/PC_Index_Vol1_Page1_Managers.png" target="_blank"><img src="images/PC_Index_Vol1_Page1_Managers.png" alt="Vol 1 Page 1 — Top 20 Managers"></a>
-        <a href="images/PC_Index_Vol1_Page2_Ratings.png" target="_blank"><img src="images/PC_Index_Vol1_Page2_Ratings.png" alt="Vol 1 Page 2 — BDC Ratings"></a>
-        <a href="images/PC_Index_Vol1_Page3_Risk.png" target="_blank"><img src="images/PC_Index_Vol1_Page3_Risk.png" alt="Vol 1 Page 3 — Sector Risk & Leverage"></a>
-        <a href="images/PC_Index_Vol1_Page4_Geography_Sources.png" target="_blank"><img src="images/PC_Index_Vol1_Page4_Geography_Sources.png" alt="Vol 1 Page 4 — Geography & Sources"></a>
-      </div>
-
-      <h4 style="color:var(--accent);margin:2rem 0 1rem">Heatmaps</h4>
-      <div class="img-grid">
-        <a href="images/PC_Heatmap_1_Ratings.png" target="_blank"><img src="images/PC_Heatmap_1_Ratings.png" alt="Heatmap — BDC Ratings"></a>
-        <a href="images/PC_Heatmap_2_Portfolio_Composition.png" target="_blank"><img src="images/PC_Heatmap_2_Portfolio_Composition.png" alt="Heatmap — Portfolio Composition"></a>
-        <a href="images/PC_Heatmap_3_Default_Types_by_Sector.png" target="_blank"><img src="images/PC_Heatmap_3_Default_Types_by_Sector.png" alt="Heatmap — Default Types by Sector"></a>
+        <a href="images/PC_Index_Vol1_Page1_Managers.png"><img src="images/PC_Index_Vol1_Page1_Managers.png" alt="Vol 1 Page 1 — Top 20 Managers"></a>
+        <a href="images/PC_Index_Vol1_Page2_Ratings.png"><img src="images/PC_Index_Vol1_Page2_Ratings.png" alt="Vol 1 Page 2 — BDC Ratings"></a>
+        <a href="images/PC_Index_Vol1_Page3_Risk.png"><img src="images/PC_Index_Vol1_Page3_Risk.png" alt="Vol 1 Page 3 — Sector Risk &amp; Leverage"></a>
+        <a href="images/PC_Index_Vol1_Page4_Geography_Sources.png"><img src="images/PC_Index_Vol1_Page4_Geography_Sources.png" alt="Vol 1 Page 4 — Geography &amp; Sources"></a>
       </div>
 
-      <h4 style="color:var(--accent);margin:2rem 0 1rem">Leverage &amp; Dry Powder</h4>
+      <p class="img-group-label">Heatmaps</p>
       <div class="img-grid">
-        <a href="images/PC_Chart_Leverage_Trend.png" target="_blank"><img src="images/PC_Chart_Leverage_Trend.png" alt="Leverage Trend 2021-2025"></a>
-        <a href="images/PC_Chart_Stress_Coverage.png" target="_blank"><img src="images/PC_Chart_Stress_Coverage.png" alt="Stress Coverage"></a>
-        <a href="images/PC_Chart_DryPowder_Firms.png" target="_blank"><img src="images/PC_Chart_DryPowder_Firms.png" alt="Dry Powder by Firm"></a>
-        <a href="images/PC_Chart_DryPowder_MarketShare.png" target="_blank"><img src="images/PC_Chart_DryPowder_MarketShare.png" alt="Dry Powder Market Share"></a>
-        <a href="images/PC_Dashboard_Leverage_DryPowder.png" target="_blank"><img src="images/PC_Dashboard_Leverage_DryPowder.png" alt="Leverage & Dry Powder Dashboard"></a>
+        <a href="images/PC_Heatmap_1_Ratings.png"><img src="images/PC_Heatmap_1_Ratings.png" alt="Heatmap — BDC Ratings"></a>
+        <a href="images/PC_Heatmap_2_Portfolio_Composition.png"><img src="images/PC_Heatmap_2_Portfolio_Composition.png" alt="Heatmap — Portfolio Composition"></a>
+        <a href="images/PC_Heatmap_3_Default_Types_by_Sector.png"><img src="images/PC_Heatmap_3_Default_Types_by_Sector.png" alt="Heatmap — Default Types by Sector"></a>
       </div>
-    </div>
-  </section>
 
-  <!-- SECTION 9: VOL. 2 FIRM DEEP-DIVES -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Vol. 2 — Firm Deep-Dives</p>
-        <h2>Top 10 Manager Profiles</h2>
-      </div>
+      <p class="img-group-label">Leverage &amp; Dry Powder</p>
       <div class="img-grid">
-        <a href="images/PC_Vol2_AUM_Growth.png" target="_blank"><img src="images/PC_Vol2_AUM_Growth.png" alt="AUM Growth by Manager"></a>
-        <a href="images/PC_Vol2_Page1_AUM_Funds.png" target="_blank"><img src="images/PC_Vol2_Page1_AUM_Funds.png" alt="Vol 2 Page 1 — AUM & Funds"></a>
-        <a href="images/PC_Vol2_Page2_Leadership_Deals.png" target="_blank"><img src="images/PC_Vol2_Page2_Leadership_Deals.png" alt="Vol 2 Page 2 — Leadership & Deals"></a>
-        <a href="images/PC_Vol2_Page3_Profiles_Top3.png" target="_blank"><img src="images/PC_Vol2_Page3_Profiles_Top3.png" alt="Vol 2 Page 3 — Apollo, Blackstone, Ares"></a>
-        <a href="images/PC_Vol2_Page4_Profiles_Rest.png" target="_blank"><img src="images/PC_Vol2_Page4_Profiles_Rest.png" alt="Vol 2 Page 4 — KKR, Blue Owl, HPS, Oaktree, Golub"></a>
-        <a href="images/PC_Vol2_Yield_vs_Risk.png" target="_blank"><img src="images/PC_Vol2_Yield_vs_Risk.png" alt="BDC Yield vs Risk Scatter"></a>
-        <a href="images/PC_Vol2_Competitive_Positioning.png" target="_blank"><img src="images/PC_Vol2_Competitive_Positioning.png" alt="Competitive Positioning"></a>
-        <a href="images/PC_Vol2_Fee_Structure.png" target="_blank"><img src="images/PC_Vol2_Fee_Structure.png" alt="BDC Fee Structure"></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 10: VOL. 2 SUPPLEMENT — PIK & ROLL-UP RISK -->
-  <section class="section alt-bg">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Vol. 2 Supplement — PIK &amp; Roll-Up Risk</p>
-        <h2>The Disconnect: PIK, Inorganic Growth &amp; Shadow Defaults</h2>
-      </div>
-      <div class="img-grid">
-        <a href="images/PC_Supp_RollUp_DealFlow.png" target="_blank"><img src="images/PC_Supp_RollUp_DealFlow.png" alt="Roll-Up Deal Flow"></a>
-        <a href="images/PC_Supp_PIK_Shadow_Default.png" target="_blank"><img src="images/PC_Supp_PIK_Shadow_Default.png" alt="PIK Shadow Default Rate"></a>
-        <a href="images/PC_Supp_EBITDA_Addbacks.png" target="_blank"><img src="images/PC_Supp_EBITDA_Addbacks.png" alt="EBITDA Add-Backs"></a>
-        <a href="images/PC_Supp_PE_Bankruptcies.png" target="_blank"><img src="images/PC_Supp_PE_Bankruptcies.png" alt="PE Bankruptcies"></a>
-        <a href="images/PC_Supp_Covenant_Erosion.png" target="_blank"><img src="images/PC_Supp_Covenant_Erosion.png" alt="Covenant Erosion"></a>
-        <a href="images/PC_Supp_ICR_Distribution.png" target="_blank"><img src="images/PC_Supp_ICR_Distribution.png" alt="ICR Distribution"></a>
-        <a href="images/PC_Supp_Page1_Metrics.png" target="_blank"><img src="images/PC_Supp_Page1_Metrics.png" alt="Supplement Page 1 — Key Metrics"></a>
-        <a href="images/PC_Supp_Page2_Cases_Regulatory.png" target="_blank"><img src="images/PC_Supp_Page2_Cases_Regulatory.png" alt="Supplement Page 2 — Case Studies"></a>
-        <a href="images/PC_Supp_Dashboard.png" target="_blank"><img src="images/PC_Supp_Dashboard.png" alt="PIK & Roll-Up Dashboard"></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 11: VOL. 2.5 — ROLL-UP PIK AUDIT -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Vol. 2.5 — Roll-Up PIK Audit</p>
-        <h2>Middle Market PE vs. Elite Boutique Deal Flow</h2>
-      </div>
-      <div class="insight-box" style="margin-bottom:2rem">
-        <span class="insight-label">Thesis</span>
-        <p>30 roll-up platforms audited across middle market PE and elite boutique lenders. 10 of 30 (33%) are in default, distressed exchange, Ch.11, or formal restructuring. PIK amendment preceded bankruptcy by 18–24 months in every case. ~$24B in impaired debt across just six case study platforms.</p>
-      </div>
-      <div class="img-grid">
-        <a href="images/PC_V25_Page1_RollupIndex.png" target="_blank"><img src="images/PC_V25_Page1_RollupIndex.png" alt="Vol 2.5 Page 1 — Roll-Up Platform Index"></a>
-        <a href="images/PC_V25_Page2_CaseStudies.png" target="_blank"><img src="images/PC_V25_Page2_CaseStudies.png" alt="Vol 2.5 Page 2 — Case Studies & MM vs Boutique"></a>
-        <a href="images/PC_V25_RevenueWaterfall.png" target="_blank"><img src="images/PC_V25_RevenueWaterfall.png" alt="Revenue Waterfall — Organic vs Acquired"></a>
-        <a href="images/PC_V25_PIK_Timeline.png" target="_blank"><img src="images/PC_V25_PIK_Timeline.png" alt="PIK Shadow Default Timeline by Tier"></a>
-        <a href="images/PC_V25_Sector_Heatmap.png" target="_blank"><img src="images/PC_V25_Sector_Heatmap.png" alt="Sector Risk Heatmap"></a>
-        <a href="images/PC_V25_MM_vs_Boutique.png" target="_blank"><img src="images/PC_V25_MM_vs_Boutique.png" alt="MM vs Elite Boutique Comparison"></a>
-        <a href="images/PC_V25_Leverage_Scatter.png" target="_blank"><img src="images/PC_V25_Leverage_Scatter.png" alt="Leverage at LBO vs Current"></a>
-        <a href="images/PC_V25_LenderExposure.png" target="_blank"><img src="images/PC_V25_LenderExposure.png" alt="Lender Exposure to Roll-Up + PIK Loans"></a>
-        <a href="images/PC_V25_Dashboard.png" target="_blank"><img src="images/PC_V25_Dashboard.png" alt="Vol 2.5 Dashboard"></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="vol3">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Vol. 3 — Credit Ratings Deep-Dive</p>
-        <h2>Agency Ratings, Shadow NAV &amp; Secondary Market Stress</h2>
-      </div>
-      <div class="insight-box" style="margin-bottom:2rem">
-        <span class="insight-label">Thesis</span>
-        <p>24-entity universe spanning BDCs, interval funds, and credit REITs. Rating agency divergence mapped across Moody's, S&P, Fitch, and KBRA. Shadow NAV analysis reveals estimated overstatement of $<strong>6.2B</strong> across the top 12 vehicles using Bloomberg secondary market bids. HY OAS at 312 bps and LSTA YTD -2.48% signal a deteriorating credit environment. CCLFX and FSK carry the highest downgrade odds at 55% and 40% respectively.</p>
-      </div>
-      <div class="img-grid">
-        <a href="images/PC_V3_Page1_MasterRatingsIndex.png" target="_blank"><img src="images/PC_V3_Page1_MasterRatingsIndex.png" alt="Vol 3 — Master Ratings Index (24 entities)"></a>
-        <a href="images/PC_V3_Page2_AgencyDivergence.png" target="_blank"><img src="images/PC_V3_Page2_AgencyDivergence.png" alt="Vol 3 — Rating Agency Divergence Heatmap"></a>
-        <a href="images/PC_V3_ShadowNAV.png" target="_blank"><img src="images/PC_V3_ShadowNAV.png" alt="Vol 3 — Shadow NAV vs. Reported NAV"></a>
-        <a href="images/PC_V3_SecondaryLoanPricing.png" target="_blank"><img src="images/PC_V3_SecondaryLoanPricing.png" alt="Vol 3 — Secondary Market Loan Pricing"></a>
-        <a href="images/PC_V3_DowngradeProbability.png" target="_blank"><img src="images/PC_V3_DowngradeProbability.png" alt="Vol 3 — 12-Month Downgrade Probability"></a>
-        <a href="images/PC_V3_RatingMigration.png" target="_blank"><img src="images/PC_V3_RatingMigration.png" alt="Vol 3 — Rating Migration Q1 2022–Q1 2026"></a>
-        <a href="images/PC_V3_PBook_Scatter.png" target="_blank"><img src="images/PC_V3_PBook_Scatter.png" alt="Vol 3 — P/Book vs. NAV Discount Scatter"></a>
-        <a href="images/PC_V3_MacroDashboard.png" target="_blank"><img src="images/PC_V3_MacroDashboard.png" alt="Vol 3 — Macro Stress Dashboard"></a>
-        <a href="images/PC_V3_Dashboard.png" target="_blank"><img src="images/PC_V3_Dashboard.png" alt="Vol 3 — Summary Dashboard"></a>
+        <a href="images/PC_Chart_Leverage_Trend.png"><img src="images/PC_Chart_Leverage_Trend.png" alt="Leverage Trend 2021–2025"></a>
+        <a href="images/PC_Chart_Stress_Coverage.png"><img src="images/PC_Chart_Stress_Coverage.png" alt="Stress Coverage"></a>
+        <a href="images/PC_Chart_DryPowder_Firms.png"><img src="images/PC_Chart_DryPowder_Firms.png" alt="Dry Powder by Firm"></a>
+        <a href="images/PC_Chart_DryPowder_MarketShare.png"><img src="images/PC_Chart_DryPowder_MarketShare.png" alt="Dry Powder Market Share"></a>
+        <a href="images/PC_Dashboard_Leverage_DryPowder.png"><img src="images/PC_Dashboard_Leverage_DryPowder.png" alt="Leverage &amp; Dry Powder Dashboard"></a>
       </div>
     </div>
   </section>
@@ -367,10 +279,19 @@
     <div class="container footer-inner">
       <span class="nav-logo">PCI<span class="accent">.</span></span>
       <p>Private Credit Index — Vol. 1–3 &mdash; Independent Research, March 2026</p>
-      <p class="footer-note">Sources: PDI 200 | S&P Global | Moody's | Fitch | KBRA | BIS | IMF | Fed | Lincoln International | Proskauer | PESP</p>
+      <p class="footer-note">Sources: PDI 200 | S&amp;P Global | Moody's | Fitch | KBRA | BIS | IMF | Fed | Lincoln International | Proskauer | PESP</p>
     </div>
   </footer>
 
+  <a href="#" id="back-to-top" title="Back to top">&#8679;</a>
+
+  <div class="lb-overlay" id="lb-overlay">
+    <button class="lb-close" id="lb-close">&times;</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+
   <script src="js/data-loader.js"></script>
+  <script src="js/vol-nav.js"></script>
 </body>
 </html>
