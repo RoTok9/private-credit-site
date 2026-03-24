@@ -1,0 +1,114 @@
+{
+  "_source": "Vol__1.R — Private Credit Index, March 2026",
+  "_note": "Auto-generated from R pipeline. Do not edit manually.",
+
+  "managers": [
+    {"rank":1,"firm":"Apollo Global Management","hq":"New York, NY","aum_bn":480,"strategy":"Corporate credit, asset-backed finance","geo":"Global"},
+    {"rank":2,"firm":"Blackstone Credit","hq":"New York, NY","aum_bn":432,"strategy":"Direct lending, structured credit, BCRED","geo":"Global"},
+    {"rank":3,"firm":"Ares Management","hq":"Los Angeles, CA","aum_bn":335,"strategy":"Direct lending, liquid credit, Asia credit","geo":"Global"},
+    {"rank":4,"firm":"KKR Credit","hq":"New York, NY","aum_bn":322,"strategy":"Direct lending, leveraged credit, infra credit","geo":"Global"},
+    {"rank":5,"firm":"HPS Investment Partners (BlackRock)","hq":"New York, NY","aum_bn":148,"strategy":"Corporate private credit, special situations","geo":"Global"},
+    {"rank":6,"firm":"Blue Owl Capital","hq":"New York, NY","aum_bn":200,"strategy":"Direct lending, GP financing, real estate credit","geo":"US"},
+    {"rank":7,"firm":"Oaktree Capital Management","hq":"Los Angeles, CA","aum_bn":120,"strategy":"Distressed debt, direct lending, structured credit","geo":"Global"},
+    {"rank":8,"firm":"Carlyle Group","hq":"Washington, DC","aum_bn":90,"strategy":"Direct lending, structured credit, global credit","geo":"Global"},
+    {"rank":9,"firm":"Goldman Sachs Asset Management","hq":"New York, NY","aum_bn":85,"strategy":"Structured credit, direct lending","geo":"Global"},
+    {"rank":10,"firm":"PIMCO","hq":"Newport Beach, CA","aum_bn":80,"strategy":"Direct lending, structured credit, CLOs","geo":"Global"},
+    {"rank":11,"firm":"Golub Capital","hq":"Chicago, IL","aum_bn":80,"strategy":"Sponsor finance, direct lending, BSL","geo":"US"},
+    {"rank":12,"firm":"Benefit Street Partners","hq":"Providence, RI","aum_bn":30,"strategy":"Senior secured, mezzanine, special situations","geo":"US"},
+    {"rank":13,"firm":"Antares Capital","hq":"Chicago, IL","aum_bn":60,"strategy":"Senior secured, unitranche, revolvers","geo":"US"},
+    {"rank":14,"firm":"Churchill Asset Management","hq":"New York, NY","aum_bn":50,"strategy":"First lien, unitranche, mezz, second lien","geo":"US"},
+    {"rank":15,"firm":"GoldenTree Asset Management","hq":"New York, NY","aum_bn":62,"strategy":"High yield bonds, leveraged loans, distressed","geo":"Global"},
+    {"rank":16,"firm":"Fortress Investment Group","hq":"New York, NY","aum_bn":48,"strategy":"Direct lending, public credit, real estate","geo":"US"},
+    {"rank":17,"firm":"Bain Capital Credit","hq":"Boston, MA","aum_bn":45,"strategy":"Senior secured, structured credit","geo":"Global"},
+    {"rank":18,"firm":"Sixth Street","hq":"Fort Worth, TX","aum_bn":50,"strategy":"Direct lending, structured products, real assets","geo":"Global"},
+    {"rank":19,"firm":"Centerbridge Partners","hq":"New York, NY","aum_bn":25,"strategy":"Direct lending, insurance, PE credit","geo":"US"},
+    {"rank":20,"firm":"Prospect Capital Management","hq":"New York, NY","aum_bn":10,"strategy":"Buy-and-hold, diversified BDC","geo":"US"},
+    {"rank":21,"firm":"Audax Private Debt","hq":"Boston, MA","aum_bn":26,"strategy":"First/stretch senior, unitranche, second lien","geo":"US"},
+    {"rank":22,"firm":"Monroe Capital","hq":"Chicago, IL","aum_bn":19.4,"strategy":"Direct lending, tech finance, venture debt","geo":"US"},
+    {"rank":23,"firm":"Thoma Bravo Credit","hq":"San Francisco, CA","aum_bn":25,"strategy":"Software/tech sector focus","geo":"US"},
+    {"rank":24,"firm":"First Eagle Alternative Credit","hq":"New York, NY","aum_bn":18,"strategy":"Senior secured lending, revolvers, term loans","geo":"US"},
+    {"rank":25,"firm":"Magnetar Capital","hq":"Evanston, IL","aum_bn":20,"strategy":"Specialty finance, structured solutions","geo":"US"},
+    {"rank":26,"firm":"Deerpath Capital","hq":"New York, NY","aum_bn":9,"strategy":"Lower middle-market senior debt","geo":"US"},
+    {"rank":27,"firm":"Kayne Anderson Private Credit","hq":"Boca Raton, FL","aum_bn":7,"strategy":"Senior debt, BDCs, secured credit","geo":"US"},
+    {"rank":28,"firm":"PineBridge Private Credit","hq":"New York, NY","aum_bn":6.1,"strategy":"Senior secured loans, lower middle market","geo":"US"},
+    {"rank":29,"firm":"Star Mountain Capital","hq":"New York, NY","aum_bn":4.5,"strategy":"Debt/equity, LP secondary positions","geo":"US"},
+    {"rank":30,"firm":"400 Capital Management","hq":"New York, NY","aum_bn":6.7,"strategy":"Structured/securitized credit, absolute return","geo":"US"},
+    {"rank":31,"firm":"Owl Rock Capital (Blue Owl)","hq":"New York, NY","aum_bn":50,"strategy":"Direct lending, large-cap sponsor","geo":"US"},
+    {"rank":32,"firm":"Blackstone Credit & Insurance","hq":"New York, NY","aum_bn":60,"strategy":"Insurance-linked credit, structured","geo":"US"},
+    {"rank":33,"firm":"FS Investments","hq":"Philadelphia, PA","aum_bn":20,"strategy":"Senior secured, corporate credit","geo":"US"},
+    {"rank":34,"firm":"Angelo Gordon (TPG)","hq":"New York, NY","aum_bn":30,"strategy":"Direct lending, structured credit","geo":"Global"},
+    {"rank":35,"firm":"Varde Partners","hq":"Minneapolis, MN","aum_bn":15,"strategy":"Distressed, special situations","geo":"Global"},
+    {"rank":36,"firm":"Marathon Asset Management","hq":"New York, NY","aum_bn":12,"strategy":"Structured credit, CLOs","geo":"Global"},
+    {"rank":37,"firm":"Owl Rock Technology Finance","hq":"New York, NY","aum_bn":8,"strategy":"Technology & life sciences direct lending","geo":"US"},
+    {"rank":38,"firm":"Intermediate Capital Group (ICG)","hq":"London, UK","aum_bn":60,"strategy":"Senior debt, mezzanine, CLOs","geo":"Europe"},
+    {"rank":39,"firm":"Muzinich & Co","hq":"New York, NY","aum_bn":25,"strategy":"European direct lending, CLOs","geo":"Global"},
+    {"rank":40,"firm":"Pemberton Asset Management","hq":"London, UK","aum_bn":35,"strategy":"European direct lending","geo":"Europe"}
+  ],
+
+  "bdcs": [
+    {"rank":1,"name":"Ares Capital Corporation","ticker":"ARCC","manager":"Ares Management","net_assets_bn":14.32,"market_cap_bn":13.12,"moodys":"Ba1","moodys_outlook":"Positive","sp":"BBB","sp_outlook":"Stable","fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":1.2,"internally_managed":false,"composite_score":9.7,"risk_tier":"Investment Grade — Adequate"},
+    {"rank":2,"name":"Blue Owl Capital Corp.","ticker":"OBDC","manager":"Blue Owl Capital","net_assets_bn":7.40,"market_cap_bn":5.65,"moodys":"Baa2","moodys_outlook":"Stable","sp":null,"kbra":"BBB+","fitch":null,"dbrs":null,"non_accrual_pct":0.7,"internally_managed":false,"composite_score":8.5,"risk_tier":"Investment Grade — Strong"},
+    {"rank":3,"name":"Blackstone Secured Lending","ticker":"BXSL","manager":"Blackstone","net_assets_bn":6.25,"market_cap_bn":5.68,"moodys":"Baa2","moodys_outlook":"Stable","sp":"BBB-","sp_outlook":"Positive","fitch":"BBB","fitch_outlook":"Stable","kbra":null,"dbrs":null,"non_accrual_pct":0.5,"internally_managed":false,"composite_score":9.3,"risk_tier":"Investment Grade — Adequate"},
+    {"rank":4,"name":"FS KKR Capital Corp","ticker":"FSK","manager":"FS/KKR","net_assets_bn":5.85,"market_cap_bn":2.91,"moodys":"Baa3","moodys_outlook":"Negative","sp":null,"kbra":"BBB","fitch":null,"dbrs":null,"non_accrual_pct":6.4,"internally_managed":false,"composite_score":10.0,"risk_tier":"Investment Grade — Adequate"},
+    {"rank":5,"name":"Golub Capital BDC","ticker":"GBDC","manager":"Golub Capital","net_assets_bn":3.91,"market_cap_bn":3.32,"moodys":"Baa2","moodys_outlook":"Stable","sp":null,"kbra":null,"fitch":null,"dbrs":"BBB-","non_accrual_pct":0.8,"internally_managed":false,"composite_score":9.0,"risk_tier":"Investment Grade — Adequate"},
+    {"rank":6,"name":"Prospect Capital","ticker":"PSEC","manager":"Prospect Capital","net_assets_bn":3.02,"market_cap_bn":1.25,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":2.5,"internally_managed":false,"composite_score":null,"risk_tier":"Unrated"},
+    {"rank":7,"name":"Main Street Capital","ticker":"MAIN","manager":"Main Street Capital","net_assets_bn":3.00,"market_cap_bn":4.96,"moodys":null,"sp":"BBB-","sp_outlook":"Stable","fitch":"BBB-","fitch_outlook":"Stable","kbra":null,"dbrs":null,"non_accrual_pct":0.3,"internally_managed":true,"composite_score":10.0,"risk_tier":"Investment Grade — Adequate"},
+    {"rank":8,"name":"Hercules Capital","ticker":"HTGC","manager":"Hercules Capital","net_assets_bn":2.23,"market_cap_bn":2.66,"moodys":null,"sp":null,"fitch":null,"kbra":"BBB+","dbrs":null,"non_accrual_pct":1.1,"internally_managed":true,"composite_score":8.0,"risk_tier":"Investment Grade — Strong"},
+    {"rank":9,"name":"Morgan Stanley Direct Lending","ticker":"MSDL","manager":"Morgan Stanley","net_assets_bn":1.73,"market_cap_bn":1.26,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":0.9,"internally_managed":false,"composite_score":null,"risk_tier":"Unrated"},
+    {"rank":10,"name":"BlackRock TCP Capital","ticker":"TCPC","manager":"BlackRock","net_assets_bn":1.61,"market_cap_bn":1.73,"moodys":"Baa3","moodys_outlook":"Negative","sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":2.2,"internally_managed":false,"composite_score":10.0,"risk_tier":"Investment Grade — Adequate"},
+    {"rank":11,"name":"PennantPark Floating Rate","ticker":"PFLT","manager":"PennantPark","net_assets_bn":1.20,"market_cap_bn":1.10,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":0.5,"internally_managed":false,"composite_score":null,"risk_tier":"Unrated"},
+    {"rank":12,"name":"Oaktree Specialty Lending","ticker":"OCSL","manager":"Oaktree","net_assets_bn":1.10,"market_cap_bn":0.95,"moodys":"Baa3","moodys_outlook":"Negative","sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":4.5,"internally_managed":false,"composite_score":10.0,"risk_tier":"Investment Grade — Adequate"},
+    {"rank":13,"name":"Horizon Technology Finance","ticker":"HRZN","manager":"Horizon","net_assets_bn":0.55,"market_cap_bn":0.45,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":3.8,"internally_managed":false,"composite_score":null,"risk_tier":"Unrated"},
+    {"rank":14,"name":"Newtek One","ticker":"NEWT","manager":"Newtek","net_assets_bn":0.80,"market_cap_bn":0.70,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":1.0,"internally_managed":false,"composite_score":null,"risk_tier":"Unrated"},
+    {"rank":15,"name":"Blue Owl Capital Corp. II","ticker":"OBDC2","manager":"Blue Owl Capital","net_assets_bn":1.50,"market_cap_bn":1.30,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":0.6,"internally_managed":false,"composite_score":null,"risk_tier":"Unrated"},
+    {"rank":16,"name":"Trinity Capital","ticker":"TRIN","manager":"Trinity Capital","net_assets_bn":0.75,"market_cap_bn":0.65,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":1.5,"internally_managed":false,"composite_score":null,"risk_tier":"Unrated"},
+    {"rank":17,"name":"Gladstone Investment","ticker":"GAIN","manager":"Gladstone","net_assets_bn":0.60,"market_cap_bn":0.55,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":2.0,"internally_managed":false,"composite_score":null,"risk_tier":"Unrated"},
+    {"rank":18,"name":"Barings BDC","ticker":"BBDC","manager":"Barings","net_assets_bn":1.00,"market_cap_bn":0.88,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":1.8,"internally_managed":false,"composite_score":null,"risk_tier":"Unrated"},
+    {"rank":19,"name":"Owl Rock Technology Finance","ticker":"ORTF","manager":"Blue Owl Capital","net_assets_bn":0.90,"market_cap_bn":0.80,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":0.9,"internally_managed":false,"composite_score":null,"risk_tier":"Unrated"},
+    {"rank":20,"name":"Capital Southwest","ticker":"CSWC","manager":"Capital Southwest","net_assets_bn":0.85,"market_cap_bn":0.90,"moodys":null,"sp":null,"fitch":null,"kbra":null,"dbrs":null,"non_accrual_pct":0.7,"internally_managed":true,"composite_score":null,"risk_tier":"Unrated"}
+  ],
+
+  "sectors": [
+    {"sector":"Software / Technology","share_pct":25,"default_rate":1.9,"risk_level":"Medium"},
+    {"sector":"Healthcare","share_pct":12,"default_rate":null,"risk_level":"High"},
+    {"sector":"Financial Services","share_pct":10,"default_rate":null,"risk_level":"Medium"},
+    {"sector":"Consumer Products","share_pct":8,"default_rate":12.8,"risk_level":"Very High"},
+    {"sector":"Business Services","share_pct":14,"default_rate":null,"risk_level":"Medium"},
+    {"sector":"Industrials","share_pct":15,"default_rate":null,"risk_level":"Low"},
+    {"sector":"TMT (ex-Software)","share_pct":10,"default_rate":null,"risk_level":"Low"},
+    {"sector":"Cleantech / Life Sciences","share_pct":4,"default_rate":null,"risk_level":"Low"},
+    {"sector":"Real Estate Credit","share_pct":7,"default_rate":null,"risk_level":"Medium"},
+    {"sector":"Energy","share_pct":5,"default_rate":null,"risk_level":"Low"}
+  ],
+
+  "leverage": [
+    {"label":"Middle Market First Lien","leverage":4.5,"category":"Private Credit"},
+    {"label":"Broadly Syndicated Loans","leverage":5.8,"category":"Leveraged Loans"},
+    {"label":"US Mid-Market (Full Stack)","leverage":7.0,"category":"Private Credit"},
+    {"label":"Buyout Leverage (2024)","leverage":4.1,"category":"Buyout"}
+  ],
+
+  "defaultTypes": [
+    {"type":"Interest Deferral / PIK","share":60},
+    {"type":"Distressed Maturity Extension","share":27},
+    {"type":"Bankruptcy / Restructuring","share":8},
+    {"type":"Uncured Payment Default","share":6}
+  ],
+
+  "defaultRates": [
+    {"label":"Consumer Products","rate":12.8,"type":"Sector"},
+    {"label":"Oaktree OCSL Portfolio","rate":4.5,"type":"BDC"},
+    {"label":"Avg BDC Non-Accrual","rate":2.2,"type":"BDC"},
+    {"label":"Software / Technology","rate":1.9,"type":"Sector"},
+    {"label":"Fitch PCDR (All Private Credit)","rate":5.8,"type":"Market"},
+    {"label":"Preqin Estimate","rate":1.76,"type":"Market"}
+  ],
+
+  "geography": [
+    {"region":"United States","share_pct":75},
+    {"region":"Europe (excl. UK)","share_pct":6},
+    {"region":"United Kingdom","share_pct":4},
+    {"region":"Canada","share_pct":4},
+    {"region":"Asia / Other","share_pct":11}
+  ]
+}

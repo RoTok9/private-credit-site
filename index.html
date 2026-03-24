@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Private Credit Index — Vol. 1</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">PCI<span class="accent">.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Overview</a></li>
+        <li><a href="analysis.html">Analysis</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Independent Research &mdash; Vol. 1 &mdash; March 2026</p>
+      <h1 class="hero-title">Private Credit<br/><span class="accent">Index</span></h1>
+      <p class="hero-sub">A comprehensive analysis of the top 40 private credit managers, 20 largest BDCs, credit ratings, sector exposure, leverage metrics, default dynamics, and geographic distribution across the $1.7T private credit universe.</p>
+      <div class="hero-cta">
+        <a href="analysis.html" class="btn-primary">Full Analysis</a>
+        <a href="methodology.html" class="btn-ghost">Sources & Methodology</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <span class="stat-value">$1.7T</span>
+        <span class="stat-label">Est. Private Credit AUM</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">40</span>
+        <span class="stat-label">Managers Analyzed</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">20</span>
+        <span class="stat-label">BDCs Rated</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">5.8%</span>
+        <span class="stat-label">Fitch PCDR (Jan 2026)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FINDINGS -->
+  <section class="section findings">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Key Findings</p>
+        <h2>What the data reveals</h2>
+      </div>
+      <div class="findings-grid">
+        <div class="finding-card">
+          <div class="finding-num">01</div>
+          <h3>Apollo & Blackstone Dominate</h3>
+          <p>Apollo ($480B) and Blackstone ($432B) alone account for over half of total AUM among the top 10 managers, with the top 5 firms collectively managing ~$1.5T in private credit.</p>
+        </div>
+        <div class="finding-card">
+          <div class="finding-num">02</div>
+          <h3>Consumer Credit is the Stress Point</h3>
+          <p>Consumer products sectors show a 12.8% default rate — over 6x the Preqin market estimate of 1.76% — while software/technology remains relatively contained at 1.9%.</p>
+        </div>
+        <div class="finding-card">
+          <div class="finding-num">03</div>
+          <h3>PIK & Extensions Dominate Defaults</h3>
+          <p>87% of default events are "soft" — 60% interest deferrals/PIK and 27% maturity extensions — suggesting lenders are managing distress quietly rather than forcing bankruptcy.</p>
+        </div>
+        <div class="finding-card">
+          <div class="finding-num">04</div>
+          <h3>US Mid-Market Leverage at 7.0x</h3>
+          <p>Full-stack US mid-market leverage sits at 7.0x EBITDA — well above the 5.5x sustainable benchmark — while broadly syndicated loans at 5.8x and buyouts at 4.1x appear more conservative.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SNAPSHOT CHARTS -->
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Data Snapshot</p>
+        <h2>Market at a Glance</h2>
+      </div>
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h4>Top 15 Managers by AUM</h4>
+          <p class="chart-sub">Private credit AUM in USD billions (2025)</p>
+          <canvas id="managerPreviewChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4>Portfolio Sector Allocation</h4>
+          <p class="chart-sub">Estimated portfolio-weighted share of originations</p>
+          <canvas id="sectorPreviewChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4>Geographic Distribution</h4>
+          <p class="chart-sub">Share of global private credit outstanding (2025)</p>
+          <canvas id="geoPreviewChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4>Default Event Type Breakdown</h4>
+          <p class="chart-sub">TTM through January 2026 (n = 89 events) — Fitch</p>
+          <canvas id="defaultTypeChart"></canvas>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a href="analysis.html" class="btn-primary">Explore Full Analysis &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="section-eyebrow">About This Project</p>
+        <h2>Independent research on the private credit market</h2>
+        <p>This project is an independent deep-dive into the private credit landscape, combining data from PDI 200, S&P Global, Moody's, Fitch, KBRA, BIS, the Federal Reserve, and the IMF. The goal is to surface actionable insight into manager concentration, BDC credit quality, sector risk, leverage dynamics, and default behavior across the direct lending ecosystem.</p>
+        <p>Built with R-based data pipelines and updated as new data becomes available. All models, tables, and visualizations are original work developed to support a career in investment banking and private equity.</p>
+      </div>
+      <div class="about-skills">
+        <div class="skill-tag">R / ggplot2</div>
+        <div class="skill-tag">Private Credit</div>
+        <div class="skill-tag">BDC Analysis</div>
+        <div class="skill-tag">Credit Ratings</div>
+        <div class="skill-tag">Direct Lending</div>
+        <div class="skill-tag">Leverage Analysis</div>
+        <div class="skill-tag">Default Analysis</div>
+        <div class="skill-tag">S&P / Moody's / Fitch / KBRA</div>
+        <div class="skill-tag">PDI 200 Data</div>
+        <div class="skill-tag">Investment Banking</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="nav-logo">PCI<span class="accent">.</span></span>
+      <p>Private Credit Index — Vol. 1 &mdash; Independent Research, March 2026</p>
+      <p class="footer-note">Sources: PDI 200 | S&P Global | Moody's | Fitch | KBRA | BIS | IMF | Fed | PGIM | McKinsey</p>
+    </div>
+  </footer>
+
+  <script src="js/data-loader.js"></script>
+</body>
+</html>

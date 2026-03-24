@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Methodology — Private Credit Market</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">PCM<span class="accent">.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="analysis.html">Analysis</a></li>
+        <li><a href="methodology.html" class="active">Methodology</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="section-eyebrow">Transparency</p>
+      <h1>Methodology</h1>
+      <p class="page-header-sub">How this analysis was built — data sources, processing pipeline, modeling assumptions, and limitations.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container methodology-layout">
+
+      <div class="method-block">
+        <div class="method-num">01</div>
+        <div class="method-content">
+          <h3>Data Sources</h3>
+          <p>This project aggregates data from multiple public and proprietary sources to build a comprehensive view of the private credit market:</p>
+          <ul>
+            <li><strong>PitchBook & LCD:</strong> Deal-level transaction data including size, leverage, pricing, and sector tags</li>
+            <li><strong>Federal Reserve (FRED):</strong> Macroeconomic series — Fed Funds Rate, CPI, 10Y Treasury, credit spreads</li>
+            <li><strong>SEC EDGAR:</strong> Fund-level disclosures, Form D filings, BDC financial statements</li>
+            <li><strong>Cambridge Associates:</strong> Benchmark fund performance data (IRR, DPI, TVPI) by vintage year</li>
+            <li><strong>Bloomberg / TRACE:</strong> Secondary market pricing and spread data for leveraged loan comparisons</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="method-block">
+        <div class="method-num">02</div>
+        <div class="method-content">
+          <h3>Data Pipeline</h3>
+          <p>Raw data is processed through a Python-based pipeline built in VS Code. The workflow is as follows:</p>
+          <div class="pipeline-steps">
+            <div class="pipeline-step">
+              <span class="step-label">Ingestion</span>
+              <p>CSV and JSON files are pulled from source APIs or uploaded manually, then validated for completeness and format consistency using <code>pandas</code>.</p>
+            </div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-step">
+              <span class="step-label">Cleaning & Normalization</span>
+              <p>Outlier detection, missing value imputation, and field standardization (e.g., unifying sector tags across data providers).</p>
+            </div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-step">
+              <span class="step-label">Feature Engineering</span>
+              <p>Derived metrics including net spread (all-in yield minus base rate), leverage ratios, rolling averages, and YoY deltas.</p>
+            </div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-step">
+              <span class="step-label">Export</span>
+              <p>Processed data is saved to <code>/data/*.json</code> files, which are read directly by the website's JavaScript layer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="method-block">
+        <div class="method-num">03</div>
+        <div class="method-content">
+          <h3>Modeling Assumptions</h3>
+          <ul>
+            <li>Leverage multiples are calculated as Total Debt / LTM EBITDA unless otherwise noted</li>
+            <li>Interest Coverage Ratio (ICR) = LTM EBITDA / Total Annual Interest Expense</li>
+            <li>Deal volume figures represent new originations only; refinancings and amendments are excluded unless specified</li>
+            <li>Fund IRRs are net of fees and carried interest as reported; vintage year defined as year of first capital call</li>
+            <li>Spreads are expressed in basis points above SOFR (post-2023) or LIBOR (pre-2023), with appropriate transition adjustments applied</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="method-block">
+        <div class="method-num">04</div>
+        <div class="method-content">
+          <h3>Limitations & Caveats</h3>
+          <p>This analysis is conducted independently and has inherent limitations:</p>
+          <ul>
+            <li>Private market data is inherently incomplete — a significant share of transactions are not publicly disclosed</li>
+            <li>Self-reported fund performance data may be subject to survivorship bias</li>
+            <li>Sector classifications vary across data providers and have been manually reconciled where possible</li>
+            <li>This analysis is for informational and educational purposes only and does not constitute investment advice</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="method-block">
+        <div class="method-num">05</div>
+        <div class="method-content">
+          <h3>Tools & Technologies</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><code>Python 3.11</code><span>Core analysis language</span></div>
+            <div class="tech-item"><code>pandas</code><span>Data manipulation</span></div>
+            <div class="tech-item"><code>NumPy</code><span>Numerical computation</span></div>
+            <div class="tech-item"><code>Chart.js</code><span>Web visualizations</span></div>
+            <div class="tech-item"><code>VS Code</code><span>Development environment</span></div>
+            <div class="tech-item"><code>GitHub Pages</code><span>Hosting & deployment</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="nav-logo">PCM<span class="accent">.</span></span>
+      <p>Private Credit Market Analysis — Independent Research Project</p>
+      <p class="footer-note">Data updated continuously via automated pipeline.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
