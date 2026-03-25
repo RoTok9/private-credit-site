@@ -44,6 +44,7 @@
   <div class="container" style="padding-top:2.5rem">
     <nav class="section-jump">
       <span class="section-jump-label">Jump to</span>
+      <a href="#dashboard">Dashboard</a>
       <a href="#interval-growth">Fund Growth</a>
       <a href="#gate-structure">Gate Structure</a>
       <a href="#gate-timeline">Timeline</a>
@@ -52,9 +53,66 @@
       <a href="#mismatch">Mismatch</a>
       <a href="#lp-exposure">LP Exposure</a>
       <a href="#secondaries">Secondaries</a>
-      <a href="#dashboard">Dashboard</a>
     </nav>
   </div>
+
+  <!-- ── INLINE DASHBOARD ── -->
+  <section class="section" id="dashboard" style="padding-bottom:0">
+    <div class="container">
+      <p class="section-eyebrow" style="margin-bottom:0.6rem">Vol. 5 — Key Metrics Dashboard</p>
+      <h2 style="font-family:var(--font-display);font-size:1.35rem;color:var(--text-primary);margin-bottom:1.5rem">Liquidity &amp; Redemption — Current State (March 2026)</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.5rem;margin-bottom:2rem">
+
+        <!-- Left column -->
+        <div>
+          <table class="v5-dash-table">
+            <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+            <tbody>
+              <tr><td>Non-Traded BDC AUM (2025)</td><td>$130B</td></tr>
+              <tr><td>Interval Credit Fund AUM (2025)</td><td>$118B</td></tr>
+              <tr><td>ELTIF AUM — Europe (2025)</td><td>$45B</td></tr>
+              <tr><td>Semi-Liquid Vehicle Total</td><td>$293B</td></tr>
+              <tr><td>Growth Since 2018</td><td>11× (from ~$25B)</td></tr>
+              <tr><td>Typical Quarterly Gate Cap</td><td>5% of NAV</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Right column -->
+        <div>
+          <table class="v5-dash-table">
+            <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+            <tbody>
+              <tr class="v5-alert"><td>Apollo ADS Redemption Request (Mar 2026)</td><td>11.2% of NAV</td></tr>
+              <tr class="v5-alert"><td>Ares SIF Redemption Request (Mar 2026)</td><td>11.6% of NAV</td></tr>
+              <tr><td>Blackstone BCRED Capital Injection</td><td>$400M</td></tr>
+              <tr><td>Avg Asset Duration (Direct Lending)</td><td>5–7 years</td></tr>
+              <tr><td>Avg Redemption Window</td><td>Quarterly (~90 days)</td></tr>
+              <tr><td>Credit Secondaries Volume (2025)</td><td>$20B</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Full-width bottom row -->
+        <div style="grid-column:1/-1">
+          <table class="v5-dash-table">
+            <thead><tr><th>Metric</th><th>Value</th><th>Context</th></tr></thead>
+            <tbody>
+              <tr class="v5-alert"><td>BDC P/NAV Range — Q1 2026</td><td>0.54× – 0.82×</td><td>FSK at 0.54×; ARCC most resilient at 0.82×</td></tr>
+              <tr class="v5-alert"><td>Secondary Market Bid — Mar 2026 (Est.)</td><td>68¢ – 78¢ on dollar</td><td>vs. 90–96¢ in normal markets; GP-led process required</td></tr>
+              <tr><td>Duration–Redemption Gap</td><td>~5.5 years</td><td>Core structural mismatch driving queue compounding</td></tr>
+              <tr><td>Retail / HNW Share of LP Base</td><td>~20%</td><td>Highest redemption pressure relative to institutional</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <p style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.5rem">
+        Sources: SEC filings · AIMA 2025 · Preqin · Apollo/Ares/BX fund disclosures · Evercore Secondaries · Jefferies · Setter Capital · PCI research
+      </p>
+    </div>
+  </section>
+  <!-- ── END DASHBOARD ── -->
 
   <section class="section" id="interval-growth">
     <div class="container">
@@ -107,10 +165,6 @@
         <a href="images/PC_V5_SecondaryDiscount_Stress.png"><img src="images/PC_V5_SecondaryDiscount_Stress.png" alt="Credit secondaries bid range across market cycles — 90-96 cents normal, sliding to 68-78 cents in March 2026 crisis"></a>
       </div>
 
-      <p class="img-group-label" id="dashboard">Summary Dashboard</p>
-      <div class="img-grid">
-        <a href="images/PC_V5_Dashboard.png"><img src="images/PC_V5_Dashboard.png" alt="Vol. 5 Key Metrics Dashboard — AUM figures, redemption requests, gate caps, P/NAV ranges, secondary pricing"></a>
-      </div>
     </div>
   </section>
 

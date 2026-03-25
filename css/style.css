@@ -844,3 +844,52 @@ code {
   margin: 0;
 }
 .disclaimer-box p strong { color: #aaa; }
+
+/* ===== VOL. 5 DASHBOARD TABLE ===== */
+.v5-dash-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin-bottom: 0.3rem;
+}
+.v5-dash-table thead tr {
+  border-bottom: 1px solid #CC5200;
+}
+.v5-dash-table th {
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #CC5200;
+}
+.v5-dash-table td {
+  padding: 0.5rem 0.75rem;
+  color: #c8c8c8;
+  border-bottom: 1px solid #1e1e1e;
+  vertical-align: top;
+  line-height: 1.45;
+}
+.v5-dash-table td:nth-child(2) {
+  color: #E8682A;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.v5-dash-table td:nth-child(3) {
+  color: #666;
+  font-size: 0.78rem;
+}
+.v5-dash-table tbody tr:hover td {
+  background: #161616;
+}
+.v5-dash-table tr.v5-alert td {
+  background: rgba(204, 82, 0, 0.06);
+}
+.v5-dash-table tr.v5-alert td:first-child {
+  border-left: 2px solid #CC5200;
+}
+@media (max-width: 700px) {
+  .v5-dash-table { font-size: 0.75rem; }
+  .v5-dash-table td, .v5-dash-table th { padding: 0.4rem 0.5rem; }
+}
