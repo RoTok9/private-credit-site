@@ -818,3 +818,29 @@ code {
   #back-to-top { bottom: 1.25rem; right: 1.25rem; width: 38px; height: 38px; }
   .vol-hero h1 { font-size: 1.6rem; }
 }
+
+/* ===== DISCLAIMER ===== */
+.disclaimer-section { padding: 1rem 0 0; }
+.disclaimer-box {
+  background: #0d1117;
+  border: 1px solid #2a2a2a;
+  border-left: 3px solid #CC5200;
+  border-radius: 6px;
+  padding: 1.1rem 1.4rem;
+}
+.disclaimer-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #CC5200;
+  margin-bottom: 0.55rem;
+}
+.disclaimer-box p {
+  font-size: 0.78rem;
+  color: #777;
+  line-height: 1.65;
+  margin: 0;
+}
+.disclaimer-box p strong { color: #aaa; }
