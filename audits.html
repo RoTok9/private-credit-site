@@ -27,38 +27,48 @@
     <div class="container">
       <p class="section-eyebrow">Independent Forensic Research</p>
       <h1>Fund Audits</h1>
-      <p class="page-header-sub">Bottom-up forensic audits of private credit vehicles — non-traded BDCs, interval funds, and similar structures. Each audit is built entirely from public SEC filings, applying a consistent analytical framework: internal rating migration, distribution coverage integrity, NAV stress-testing, market-implied valuation proxies, and a scored red flag inventory.</p>
+      <p class="page-header-sub">Bottom-up forensic audits of non-traded BDCs and private credit interval funds — built entirely from public SEC filings. Each audit applies a consistent framework: internal rating migration, distribution coverage integrity, NAV stress-testing via publicly traded proxies, leverage trajectory, yield compression, and a scored red flag inventory.</p>
     </div>
   </div>
 
   <section class="section">
     <div class="container">
 
-      <!-- METHODOLOGY NOTE -->
+      <!-- METHODOLOGY BAR -->
       <div class="audit-method-bar">
-        <div class="audit-method-item"><span class="audit-method-label">Data Sources</span><span>SEC EDGAR 10-K / 10-Q · Earnings presentations · XBRL filings</span></div>
-        <div class="audit-method-item"><span class="audit-method-label">Valuation Proxy</span><span>Publicly traded sister funds (P/NAV discount applied to non-traded counterpart)</span></div>
-        <div class="audit-method-item"><span class="audit-method-label">Flag Scoring</span><span>0–10 severity scale across Stress / Valuation / Income / Leverage / Concentration</span></div>
+        <div class="audit-method-item">
+          <span class="audit-method-label">Data Sources</span>
+          <span>SEC EDGAR 10-K / 10-Q &middot; XBRL filings &middot; Earnings presentations</span>
+        </div>
+        <div class="audit-method-item">
+          <span class="audit-method-label">Valuation Proxy</span>
+          <span>Publicly traded sister fund P/NAV discount applied to non-traded book value</span>
+        </div>
+        <div class="audit-method-item">
+          <span class="audit-method-label">Flag Scoring</span>
+          <span>0–10 severity across Stress / Valuation / Income / Leverage / Concentration</span>
+        </div>
+        <div class="audit-method-item">
+          <span class="audit-method-label">Market Universe</span>
+          <span>47 non-traded BDCs &middot; $205B aggregate AUM &middot; 22 interval funds added in 2025</span>
+        </div>
       </div>
 
-      <!-- COMPLETED AUDITS -->
+      <!-- ==================== COMPLETED ==================== -->
       <div class="audit-section-header">
         <h2>Completed Audits</h2>
-        <span class="audit-count">1 audit</span>
+        <span class="audit-count">1 of 9 targets</span>
       </div>
 
       <div class="audit-grid">
-
-        <!-- OCIC -->
         <div class="audit-card">
           <div class="audit-card-header">
             <div>
               <div class="audit-card-name">Blue Owl Credit Income Corp</div>
-              <div class="audit-card-ticker">OCIC &mdash; Non-Traded BDC &mdash; Blue Owl Credit Advisers</div>
+              <div class="audit-card-ticker">OCIC &mdash; Non-Traded BDC &mdash; Blue Owl Credit Advisers &mdash; CIK 0001812554</div>
             </div>
             <span class="audit-status-badge audit-status-complete">Complete</span>
           </div>
-
           <div class="audit-meta-row">
             <div class="audit-meta-item">
               <span class="audit-meta-label">AUM (Q4 2025)</span>
@@ -77,51 +87,264 @@
               <span class="audit-meta-value audit-meta-alert">~$2.19/share (23.5%)</span>
             </div>
           </div>
-
-          <p class="audit-finding">Rating 3 (stressed) loans grew +324% from Q1 2024 to Q4 2025 ($425M &rarr; $1.80B). Rating 4 &mdash; a category that did not exist in Q4 2024 &mdash; emerged at $103M. FY 2025 distribution coverage fell below 1.0&times; for the first time (0.91&times;). Portfolio yield compressed 250bps from peak. OBDC, managed by the same team investing in the same loans, trades at a 23.5% discount to its own stated NAV &mdash; implying a ~$2.19/share overstatement in OCIC's $9.32 stated book value.</p>
-
+          <p class="audit-finding">Rating 3 (stressed) loans grew +324% from Q1 2024 to Q4 2025 ($425M &rarr; $1.80B). Rating 4 emerged from $0 to $103M. FY 2025 distribution coverage fell below 1.0&times; for the first time (0.91&times;). Portfolio yield compressed 250bps from peak. OBDC — same manager, same loans — trades at a 23.5% discount to NAV, implying a ~$2.19/share overstatement in OCIC's $9.32 stated book value.</p>
           <div class="audit-card-footer">
             <div class="audit-flag-row">
               <span class="audit-flag audit-flag-red">Rating 3 +324%</span>
               <span class="audit-flag audit-flag-red">Rating 4 Emerged</span>
               <span class="audit-flag audit-flag-red">Coverage 0.91&times;</span>
               <span class="audit-flag audit-flag-orange">NAV Gap 23.5%</span>
-              <span class="audit-flag audit-flag-orange">Yield −250bps</span>
+              <span class="audit-flag audit-flag-orange">Yield &minus;250bps</span>
               <span class="audit-flag audit-flag-orange">~100% Level 3</span>
             </div>
             <a href="vol6.html" class="audit-link-btn">View Full Audit &rarr;</a>
           </div>
         </div>
+      </div>
+
+      <!-- ==================== PRIORITY QUEUE ==================== -->
+      <div class="audit-section-header" style="margin-top:3rem">
+        <h2>Priority Queue</h2>
+        <span class="audit-count">4 targets — next to be audited</span>
+      </div>
+
+      <div class="audit-grid">
+
+        <!-- BCRED -->
+        <div class="audit-card audit-card-queue">
+          <div class="audit-card-header">
+            <div>
+              <div class="audit-card-name">Blackstone Private Credit Fund</div>
+              <div class="audit-card-ticker">BCRED &mdash; Non-Traded Perpetual BDC &mdash; Blackstone Credit &amp; Insurance &mdash; CIK 1803498</div>
+            </div>
+            <span class="audit-status-badge audit-status-queue">Priority #1</span>
+          </div>
+          <div class="audit-meta-row">
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Total Investments</span>
+              <span class="audit-meta-value">$82.2B</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">NAV</span>
+              <span class="audit-meta-value">$47.6B (Q4 2025)</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Rank</span>
+              <span class="audit-meta-value">Largest private credit fund globally</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Platform AUM</span>
+              <span class="audit-meta-value">$520B+ (Blackstone Credit)</span>
+            </div>
+          </div>
+          <p class="audit-finding"><strong>Audit Thesis:</strong> BCRED's sheer scale ($82B total investments) makes it the highest-impact target in the market. The Blackstone platform's integration of insurance capital (BXCI), co-investment vehicles, and retail distribution creates structural complexity that warrants forensic examination. BXSL — the publicly traded Blackstone-managed BDC — serves as our valuation proxy. Key questions: what do the internal ratings look like at this scale? Are distributions covered by NII? Has the rapid capital raise outpaced deployment quality? The 2026 liquidity environment puts every large non-traded BDC under stress.</p>
+          <div class="audit-card-footer">
+            <div class="audit-flag-row">
+              <span class="audit-flag audit-flag-orange">Scale Opacity</span>
+              <span class="audit-flag audit-flag-orange">Insurance Capital Commingling</span>
+              <span class="audit-flag audit-flag-orange">Redemption Architecture</span>
+              <span class="audit-flag audit-flag-orange">BXSL Proxy Available</span>
+            </div>
+            <span class="audit-link-btn audit-link-planned">In Queue</span>
+          </div>
+        </div>
+
+        <!-- CCLFX -->
+        <div class="audit-card audit-card-queue">
+          <div class="audit-card-header">
+            <div>
+              <div class="audit-card-name">Cliffwater Corporate Lending Fund</div>
+              <div class="audit-card-ticker">CCLFX &mdash; Interval Fund &mdash; Cliffwater LLC</div>
+            </div>
+            <span class="audit-status-badge audit-status-queue">Priority #2</span>
+          </div>
+          <div class="audit-meta-row">
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Net Assets</span>
+              <span class="audit-meta-value">~$30–32B (Jul 2025)</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Structure</span>
+              <span class="audit-meta-value">Interval Fund (perpetual)</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Growth Rate</span>
+              <span class="audit-meta-value">&gt;100% CAGR since 2019</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Precedent</span>
+              <span class="audit-meta-value">Nick Nemeth audit (2024)</span>
+            </div>
+          </div>
+          <p class="audit-finding"><strong>Audit Thesis:</strong> The largest private credit interval fund — and the fund that Nick Nemeth (Mispriced Assets) identified structural issues with in his widely-read 2024 audit. Our independent version applies the same forensic framework to CCLFX, allowing direct comparison of methodologies and findings. The interval fund structure creates unique liquidity risk: 5% quarterly redemption gates against a portfolio with no exit liquidity. Has rapid growth diluted underwriting quality? How does it compare to OCIC on rating migration and coverage ratios?</p>
+          <div class="audit-card-footer">
+            <div class="audit-flag-row">
+              <span class="audit-flag audit-flag-red">Interval Fund Liquidity Gates</span>
+              <span class="audit-flag audit-flag-red">Prior Nemeth Audit Flagged</span>
+              <span class="audit-flag audit-flag-orange">Rapid AUM Growth</span>
+              <span class="audit-flag audit-flag-orange">No Public Proxy</span>
+            </div>
+            <span class="audit-link-btn audit-link-planned">In Queue</span>
+          </div>
+        </div>
+
+        <!-- HLEND -->
+        <div class="audit-card audit-card-queue">
+          <div class="audit-card-header">
+            <div>
+              <div class="audit-card-name">HPS Corporate Lending Fund</div>
+              <div class="audit-card-ticker">HLEND &mdash; Non-Traded BDC &mdash; HPS Investment Partners / BlackRock &mdash; CIK 1838126</div>
+            </div>
+            <span class="audit-status-badge audit-status-queue">Priority #3</span>
+          </div>
+          <div class="audit-meta-row">
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Total Investments</span>
+              <span class="audit-meta-value">~$23.2B (Aug 2025)</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Platform AUM</span>
+              <span class="audit-meta-value">$179B (HPS)</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Structure Change</span>
+              <span class="audit-meta-value">HPS acquired by BlackRock (2025)</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Bloomberg Access</span>
+              <span class="audit-meta-value">Rblpapi planned (Xavier)</span>
+            </div>
+          </div>
+          <p class="audit-finding"><strong>Audit Thesis:</strong> BlackRock's 2025 acquisition of HPS Investment Partners introduced significant management continuity risk. The fund's investment committee, underwriting culture, and incentive structures may have shifted mid-cycle — precisely when portfolio monitoring is most critical. HLEND's rapid growth to $23B occurred largely in a rate-falling environment, potentially masking origination quality deterioration. BX's own publicly traded BDCs (BXSL, BGCPE) serve as partial proxies. Key question: does management transition show up in portfolio quality metrics?</p>
+          <div class="audit-card-footer">
+            <div class="audit-flag-row">
+              <span class="audit-flag audit-flag-red">Manager Transition Risk</span>
+              <span class="audit-flag audit-flag-orange">Rapid Scale Growth</span>
+              <span class="audit-flag audit-flag-orange">Rate-Falling Originations</span>
+              <span class="audit-flag audit-flag-orange">Bloomberg Rblpapi Planned</span>
+            </div>
+            <span class="audit-link-btn audit-link-planned">In Queue</span>
+          </div>
+        </div>
+
+        <!-- ASIF -->
+        <div class="audit-card audit-card-queue">
+          <div class="audit-card-header">
+            <div>
+              <div class="audit-card-name">Ares Strategic Income Fund</div>
+              <div class="audit-card-ticker">ASIF &mdash; Non-Traded BDC &mdash; Ares Management Corporation</div>
+            </div>
+            <span class="audit-status-badge audit-status-queue">Priority #4</span>
+          </div>
+          <div class="audit-meta-row">
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Total Investments</span>
+              <span class="audit-meta-value">~$22.7B (Q4 2025)</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Platform AUM</span>
+              <span class="audit-meta-value">$596–623B (Ares)</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Annualized Return</span>
+              <span class="audit-meta-value">10.94% Class I (inception)</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Proxy</span>
+              <span class="audit-meta-value">ARCC (Ares Capital Corp, NYSE)</span>
+            </div>
+          </div>
+          <p class="audit-finding"><strong>Audit Thesis:</strong> Ares is the largest private credit manager globally. ASIF markets itself on the strength of that platform — but scale creates a question: is deal quality maintained when you are the counterparty in virtually every middle-market transaction? ARCC, Ares's publicly traded BDC ($25B+ AUM), trades at a modest premium to NAV and serves as our most direct valuation proxy. The "Strategic Income" mandate (targeting broad credit exposure) may embed more risk than the pure direct-lending peers. Filed with SEC December 2022; now has 3+ years of performance data to audit.</p>
+          <div class="audit-card-footer">
+            <div class="audit-flag-row">
+              <span class="audit-flag audit-flag-orange">Platform Scale Risk</span>
+              <span class="audit-flag audit-flag-orange">Broad Mandate Opacity</span>
+              <span class="audit-flag audit-flag-orange">ARCC Proxy Available</span>
+              <span class="audit-flag audit-flag-orange">3yr Track Record Available</span>
+            </div>
+            <span class="audit-link-btn audit-link-planned">In Queue</span>
+          </div>
+        </div>
 
       </div>
 
-      <!-- PIPELINE -->
+      <!-- ==================== ADDITIONAL TARGETS ==================== -->
       <div class="audit-section-header" style="margin-top:3rem">
-        <h2>Audit Pipeline</h2>
-        <span class="audit-count">Targets identified</span>
+        <h2>Additional Targets</h2>
+        <span class="audit-count">5 targets identified</span>
       </div>
 
       <div class="audit-pipeline-grid">
 
+        <!-- FSK -->
+        <div class="audit-pipeline-card audit-pipeline-live">
+          <div class="audit-pipeline-name">FS KKR Capital Corp</div>
+          <div class="audit-pipeline-meta">FSK &mdash; Publicly Traded BDC &mdash; KKR / Franklin Square &mdash; ~$14B AUM</div>
+          <p class="audit-pipeline-note"><strong>Live Alert:</strong> Moody's downgraded FSK to junk (March 2026). Non-accrual rate ~5.5% — among the highest in the BDC universe. Public filing transparency makes this a high-priority forensic opportunity with real-time market data to cross-reference. KKR's pivot away from FSK toward non-traded vehicles adds an institutional incentive question.</p>
+          <span class="audit-status-badge audit-status-alert">Live Alert</span>
+        </div>
+
+        <!-- OTIC -->
         <div class="audit-pipeline-card">
-          <div class="audit-pipeline-name">HPS Investment Partners Direct Lending</div>
-          <div class="audit-pipeline-meta">HLEND &mdash; Non-Traded BDC &mdash; HPS / BlackRock &mdash; ~$23.2B AUM</div>
-          <p class="audit-pipeline-note">Second-largest non-traded BDC by AUM. Rapid growth trajectory and heavy healthcare/software exposure. Awaiting Bloomberg Terminal access for loan-level pricing verification via Rblpapi.</p>
+          <div class="audit-pipeline-name">Blue Owl Technology Income Corp</div>
+          <div class="audit-pipeline-meta">OTIC &mdash; Non-Traded BDC &mdash; Blue Owl Capital &mdash; ~$6.2B AUM</div>
+          <p class="audit-pipeline-note">Same manager, same team as OCIC — but 100% technology sector concentration. If OCIC's combined healthcare + software exposure at 36.5% is a red flag, OTIC's entire portfolio is concentrated in the single sector under the most stress in 2025–26. OCIC audit provides direct analytical comparison baseline. Valuation proxy: OBDC/OBDE (same platform).</p>
           <span class="audit-status-badge audit-status-planned">Planned</span>
         </div>
 
+        <!-- Apollo BDC -->
         <div class="audit-pipeline-card">
-          <div class="audit-pipeline-name">Ares Strategic Income Fund</div>
-          <div class="audit-pipeline-meta">ASIF &mdash; Non-Traded BDC &mdash; Ares Management &mdash; ~$22.7B AUM</div>
-          <p class="audit-pipeline-note">Third-largest non-traded BDC. Ares is one of the largest private credit platforms globally — audit would examine whether scale translates to portfolio quality or masks concentration risk.</p>
+          <div class="audit-pipeline-name">Apollo Debt Solutions BDC</div>
+          <div class="audit-pipeline-meta">Non-Traded BDC &mdash; Apollo Global Management &mdash; ~$6–7B AUM &mdash; CIK 1837532</div>
+          <p class="audit-pipeline-note">Apollo's retail direct-lending vehicle, launched into a rising-rate environment and now originating in a rate-falling one. Distribution rate 9.74% annualized (Class I) — aggressive for a senior secured book. Apollo's largest publicly traded BDC (MidCap Financial) provides partial valuation proxy. Continuous offering through 2025 growth cycle warrants underwriting quality review.</p>
+          <span class="audit-status-badge audit-status-planned">Planned</span>
+        </div>
+
+        <!-- Franklin BSP -->
+        <div class="audit-pipeline-card">
+          <div class="audit-pipeline-name">Franklin BSP Private Credit Fund</div>
+          <div class="audit-pipeline-meta">FBSPX &mdash; Interval Fund &mdash; Franklin Templeton / Benefit Street Partners &mdash; CIK 1794041</div>
+          <p class="audit-pipeline-note">The interval fund structure with quarterly redemptions creates unique gates-vs-liquidity risk. Benefit Street Partners (BSP) was acquired by Franklin Templeton — similar management transition risk to HLEND. Middle-market focus with 5% quarterly redemption cap. The combined Franklin distribution network has driven rapid retail inflows, raising questions about deployment quality.</p>
+          <span class="audit-status-badge audit-status-planned">Planned</span>
+        </div>
+
+        <!-- BDEBT -->
+        <div class="audit-pipeline-card">
+          <div class="audit-pipeline-name">BlackRock Private Credit Fund</div>
+          <div class="audit-pipeline-meta">BDEBT &mdash; Non-Traded BDC &mdash; BlackRock &mdash; CIK 1902649</div>
+          <p class="audit-pipeline-note">BlackRock's own private credit BDC — separate from the HLEND/HPS vehicle. 100% first lien senior secured mandate with monthly distributions. BlackRock's institutional reputation creates a perception premium that may not reflect underlying portfolio composition. The 2025 HPS acquisition complicates the platform story — does BDEBT now share infrastructure and deal flow with HLEND?</p>
           <span class="audit-status-badge audit-status-planned">Planned</span>
         </div>
 
       </div>
 
+      <!-- MARKET CONTEXT NOTE -->
+      <div class="audit-context-box">
+        <div class="audit-context-label">Market Context — March 2026</div>
+        <div class="audit-context-grid">
+          <div>
+            <span class="audit-context-stat">47</span>
+            <span class="audit-context-desc">Non-traded BDCs active in the U.S. market</span>
+          </div>
+          <div>
+            <span class="audit-context-stat">$205B</span>
+            <span class="audit-context-desc">Aggregate non-traded BDC AUM</span>
+          </div>
+          <div>
+            <span class="audit-context-stat">$93B</span>
+            <span class="audit-context-desc">Private credit interval fund AUM (Jan 2025)</span>
+          </div>
+          <div>
+            <span class="audit-context-stat">5%</span>
+            <span class="audit-context-desc">FSK non-accrual rate — highest-stress public BDC</span>
+          </div>
+        </div>
+        <p class="audit-context-note">The 2026 liquidity environment — declining rates, accelerating redemptions, and compressed new-deal yields — creates the conditions under which distribution coverage gaps, rating deterioration, and NAV opacity typically surface. The audits in this series are designed to examine these risks in real time, using only publicly available data.</p>
+      </div>
+
       <!-- DISCLAIMER -->
       <div class="audit-disclaimer">
-        <p>All audits are independent academic and educational work built from publicly available SEC filings. They do not constitute investment advice, a solicitation, or a recommendation to buy, sell, or hold any security. The author has no affiliation with any of the funds, managers, or data providers referenced. Research volumes are password-protected and intended for professional audiences.</p>
+        <p>All audits are independent academic and educational work built from publicly available SEC filings. They do not constitute investment advice, a solicitation, or a recommendation to buy, sell, or hold any security. The author has no affiliation with any of the funds, managers, or data providers referenced. Research is password-protected and intended for professional audiences.</p>
       </div>
 
     </div>
