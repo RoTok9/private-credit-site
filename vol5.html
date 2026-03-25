@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vol. 5 — Liquidity &amp; Redemption Architecture | Private Credit Index</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">PCI<span class="accent">.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="analysis.html" class="active">Research</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="vol-tabs">
+    <div class="vol-tabs-inner">
+      <a href="analysis.html"        class="vol-tab">Vol. 1 — Market Overview</a>
+      <a href="vol2.html"            class="vol-tab">Vol. 2 — Firm Deep-Dives</a>
+      <a href="vol2-supplement.html" class="vol-tab">Vol. 2 Supp — PIK &amp; Roll-Ups</a>
+      <a href="vol25.html"           class="vol-tab">Vol. 2.5 — Roll-Up Audit</a>
+      <a href="vol3.html"            class="vol-tab">Vol. 3 — Credit Ratings</a>
+      <a href="vol4.html"            class="vol-tab">Vol. 4 — Market Structure</a>
+      <a href="vol5.html"            class="vol-tab active">Vol. 5 — Liquidity &amp; Redemption</a>
+    </div>
+  </div>
+
+  <div class="vol-hero">
+    <div class="container vol-hero-inner">
+      <span class="vol-badge">Vol. 5 — March 2026</span>
+      <h1>Liquidity &amp; Redemption Architecture</h1>
+      <p>A structural dissection of how private credit funds are built to fail in a redemption shock: non-traded BDC and interval fund AUM doubling to $248B since 2022, 5% quarterly gate caps overwhelmed by 11–12% redemption requests at Apollo and Ares, a 5–7 year asset duration mismatch against 90-day windows, BDC P/NAV multiples collapsing to 0.54–0.82x, and secondary market bids sliding toward 68 cents — the anatomy of a liquidity crisis in real time.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:2.5rem">
+    <nav class="section-jump">
+      <span class="section-jump-label">Jump to</span>
+      <a href="#interval-growth">Fund Growth</a>
+      <a href="#gate-structure">Gate Structure</a>
+      <a href="#gate-timeline">Timeline</a>
+      <a href="#queue-dynamics">Queue Dynamics</a>
+      <a href="#nav-discount">P/NAV</a>
+      <a href="#mismatch">Mismatch</a>
+      <a href="#lp-exposure">LP Exposure</a>
+      <a href="#secondaries">Secondaries</a>
+      <a href="#dashboard">Dashboard</a>
+    </nav>
+  </div>
+
+  <section class="section" id="interval-growth">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Vol. 5 — Liquidity &amp; Redemption Architecture</p>
+        <h2>The Structural Fault Lines of Private Credit Liquidity</h2>
+      </div>
+      <div class="insight-box" style="margin-bottom:2rem">
+        <span class="insight-label">Key Findings</span>
+        <p>Non-traded BDCs, interval credit funds, and ELTIFs have grown from ~$25B (2018) to over $293B (2025) — an 11x surge driven almost entirely by retail wealth management distribution. These vehicles promise quarterly liquidity through a 5% gate cap, but in stress, redemption requests exceed the cap by 2x or more, creating compounding queues. Apollo ADS (11.2% requested) and Ares SIF (11.6% requested) triggered March 2026's triple gate event alongside Blackstone BCRED's $400M capital injection. The structural mismatch is simple: assets have a 5–7 year duration, windows are 90 days, and the 5% cap was designed for normal outflows — not a crisis. BDC P/NAV multiples have compressed to 0.54–0.82x; credit secondaries are pricing at 68–78 cents on the dollar.</p>
+      </div>
+
+      <p class="img-group-label">Non-Traded &amp; Semi-Liquid Private Credit Vehicles — AUM Growth (2018–2025)</p>
+      <div class="img-grid">
+        <a href="images/PC_V5_IntervalFundGrowth.png"><img src="images/PC_V5_IntervalFundGrowth.png" alt="Non-traded BDC, interval credit fund, and ELTIF AUM growth 2018–2025 — $293B total by 2025"></a>
+      </div>
+
+      <p class="img-group-label" id="gate-structure">Private Credit Vehicle Liquidity Architecture</p>
+      <div class="img-grid">
+        <a href="images/PC_V5_GateStructureComparison.png"><img src="images/PC_V5_GateStructureComparison.png" alt="Liquidity score comparison by fund type — listed BDC vs. interval fund vs. LP fund vs. ELTIF vs. hedge fund side pocket"></a>
+      </div>
+
+      <p class="img-group-label" id="gate-timeline">Historical Gate Event Timeline (2008–2026)</p>
+      <div class="img-grid">
+        <a href="images/PC_V5_GateEventTimeline.png"><img src="images/PC_V5_GateEventTimeline.png" alt="Timeline of major private credit and real estate fund gate events from 2008 to March 2026 triple gate"></a>
+      </div>
+
+      <p class="img-group-label" id="queue-dynamics">Redemption Queue Dynamics — Apollo Debt Solutions (Illustrative)</p>
+      <div class="img-grid">
+        <a href="images/PC_V5_RedemptionQueueDynamics.png"><img src="images/PC_V5_RedemptionQueueDynamics.png" alt="Redemption requests vs. 5% quarterly cap — queue backlog builds from Q3 2025 to 10% of NAV by Q3 2026E"></a>
+      </div>
+
+      <p class="img-group-label" id="nav-discount">BDC Price-to-NAV Multiples — Q1 2022 to Q1 2026</p>
+      <div class="img-grid">
+        <a href="images/PC_V5_NAVDiscount_BDC.png"><img src="images/PC_V5_NAVDiscount_BDC.png" alt="P/NAV multiples for ARCC, BXSL, ORCC, FSK, GBDC — discounts widening sharply into Q1 2026 crisis"></a>
+      </div>
+
+      <p class="img-group-label" id="mismatch">The Liquidity Mismatch at the Heart of Private Credit Funds</p>
+      <div class="img-grid">
+        <a href="images/PC_V5_LiquidityMismatch.png"><img src="images/PC_V5_LiquidityMismatch.png" alt="Asset duration (5yr avg loan maturity) vs. 90-day redemption window — structural gap visualized"></a>
+      </div>
+
+      <p class="img-group-label" id="lp-exposure">Investor Base &amp; Redemption Vulnerability</p>
+      <div class="img-grid">
+        <a href="images/PC_V5_LPExposureByType.png"><img src="images/PC_V5_LPExposureByType.png" alt="LP base composition by investor type with redemption vulnerability rating — retail/HNW and family offices highest risk"></a>
+      </div>
+
+      <p class="img-group-label" id="secondaries">Secondary Market Pricing During Stress Periods</p>
+      <div class="img-grid">
+        <a href="images/PC_V5_SecondaryDiscount_Stress.png"><img src="images/PC_V5_SecondaryDiscount_Stress.png" alt="Credit secondaries bid range across market cycles — 90-96 cents normal, sliding to 68-78 cents in March 2026 crisis"></a>
+      </div>
+
+      <p class="img-group-label" id="dashboard">Summary Dashboard</p>
+      <div class="img-grid">
+        <a href="images/PC_V5_Dashboard.png"><img src="images/PC_V5_Dashboard.png" alt="Vol. 5 Key Metrics Dashboard — AUM figures, redemption requests, gate caps, P/NAV ranges, secondary pricing"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="nav-logo">PCI<span class="accent">.</span></span>
+      <p>Private Credit Index — Vol. 1–5 &mdash; Independent Research, March 2026</p>
+      <p class="footer-note">Sources: SEC filings | AIMA 2025 | Preqin | McKinsey Global Private Markets | Cliffwater CDLI | Lincoln International | Apollo/Ares/BX fund disclosures | Evercore Secondaries | Jefferies | Setter Capital | Northleaf Capital</p>
+    </div>
+  </footer>
+
+  <a href="#" id="back-to-top" title="Back to top">&#8679;</a>
+
+  <div class="lb-overlay" id="lb-overlay">
+    <button class="lb-close" id="lb-close">&times;</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+
+  <script src="js/gate.js"></script>
+  <script src="js/vol-nav.js"></script>
+</body>
+</html>
