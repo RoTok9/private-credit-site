@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fund Audits — Private Credit Index</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">PCI<span class="accent">.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="analysis.html">Research</a></li>
+        <li><a href="audits.html" class="active">Fund Audits</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="section-eyebrow">Independent Forensic Research</p>
+      <h1>Fund Audits</h1>
+      <p class="page-header-sub">Bottom-up forensic audits of private credit vehicles — non-traded BDCs, interval funds, and similar structures. Each audit is built entirely from public SEC filings, applying a consistent analytical framework: internal rating migration, distribution coverage integrity, NAV stress-testing, market-implied valuation proxies, and a scored red flag inventory.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- METHODOLOGY NOTE -->
+      <div class="audit-method-bar">
+        <div class="audit-method-item"><span class="audit-method-label">Data Sources</span><span>SEC EDGAR 10-K / 10-Q · Earnings presentations · XBRL filings</span></div>
+        <div class="audit-method-item"><span class="audit-method-label">Valuation Proxy</span><span>Publicly traded sister funds (P/NAV discount applied to non-traded counterpart)</span></div>
+        <div class="audit-method-item"><span class="audit-method-label">Flag Scoring</span><span>0–10 severity scale across Stress / Valuation / Income / Leverage / Concentration</span></div>
+      </div>
+
+      <!-- COMPLETED AUDITS -->
+      <div class="audit-section-header">
+        <h2>Completed Audits</h2>
+        <span class="audit-count">1 audit</span>
+      </div>
+
+      <div class="audit-grid">
+
+        <!-- OCIC -->
+        <div class="audit-card">
+          <div class="audit-card-header">
+            <div>
+              <div class="audit-card-name">Blue Owl Credit Income Corp</div>
+              <div class="audit-card-ticker">OCIC &mdash; Non-Traded BDC &mdash; Blue Owl Credit Advisers</div>
+            </div>
+            <span class="audit-status-badge audit-status-complete">Complete</span>
+          </div>
+
+          <div class="audit-meta-row">
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">AUM (Q4 2025)</span>
+              <span class="audit-meta-value">$35.9B</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Filing Coverage</span>
+              <span class="audit-meta-value">Q1 2024 – Q4 2025</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">Red Flags</span>
+              <span class="audit-meta-value audit-meta-alert">14 &mdash; 9 score &ge;7/10</span>
+            </div>
+            <div class="audit-meta-item">
+              <span class="audit-meta-label">NAV Gap</span>
+              <span class="audit-meta-value audit-meta-alert">~$2.19/share (23.5%)</span>
+            </div>
+          </div>
+
+          <p class="audit-finding">Rating 3 (stressed) loans grew +324% from Q1 2024 to Q4 2025 ($425M &rarr; $1.80B). Rating 4 &mdash; a category that did not exist in Q4 2024 &mdash; emerged at $103M. FY 2025 distribution coverage fell below 1.0&times; for the first time (0.91&times;). Portfolio yield compressed 250bps from peak. OBDC, managed by the same team investing in the same loans, trades at a 23.5% discount to its own stated NAV &mdash; implying a ~$2.19/share overstatement in OCIC's $9.32 stated book value.</p>
+
+          <div class="audit-card-footer">
+            <div class="audit-flag-row">
+              <span class="audit-flag audit-flag-red">Rating 3 +324%</span>
+              <span class="audit-flag audit-flag-red">Rating 4 Emerged</span>
+              <span class="audit-flag audit-flag-red">Coverage 0.91&times;</span>
+              <span class="audit-flag audit-flag-orange">NAV Gap 23.5%</span>
+              <span class="audit-flag audit-flag-orange">Yield −250bps</span>
+              <span class="audit-flag audit-flag-orange">~100% Level 3</span>
+            </div>
+            <a href="vol6.html" class="audit-link-btn">View Full Audit &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PIPELINE -->
+      <div class="audit-section-header" style="margin-top:3rem">
+        <h2>Audit Pipeline</h2>
+        <span class="audit-count">Targets identified</span>
+      </div>
+
+      <div class="audit-pipeline-grid">
+
+        <div class="audit-pipeline-card">
+          <div class="audit-pipeline-name">HPS Investment Partners Direct Lending</div>
+          <div class="audit-pipeline-meta">HLEND &mdash; Non-Traded BDC &mdash; HPS / BlackRock &mdash; ~$23.2B AUM</div>
+          <p class="audit-pipeline-note">Second-largest non-traded BDC by AUM. Rapid growth trajectory and heavy healthcare/software exposure. Awaiting Bloomberg Terminal access for loan-level pricing verification via Rblpapi.</p>
+          <span class="audit-status-badge audit-status-planned">Planned</span>
+        </div>
+
+        <div class="audit-pipeline-card">
+          <div class="audit-pipeline-name">Ares Strategic Income Fund</div>
+          <div class="audit-pipeline-meta">ASIF &mdash; Non-Traded BDC &mdash; Ares Management &mdash; ~$22.7B AUM</div>
+          <p class="audit-pipeline-note">Third-largest non-traded BDC. Ares is one of the largest private credit platforms globally — audit would examine whether scale translates to portfolio quality or masks concentration risk.</p>
+          <span class="audit-status-badge audit-status-planned">Planned</span>
+        </div>
+
+      </div>
+
+      <!-- DISCLAIMER -->
+      <div class="audit-disclaimer">
+        <p>All audits are independent academic and educational work built from publicly available SEC filings. They do not constitute investment advice, a solicitation, or a recommendation to buy, sell, or hold any security. The author has no affiliation with any of the funds, managers, or data providers referenced. Research volumes are password-protected and intended for professional audiences.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="nav-logo">PCI<span class="accent">.</span></span>
+      <p>Private Credit Index — Fund Audits &mdash; Independent Research, March 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>
