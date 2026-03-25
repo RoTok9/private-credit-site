@@ -845,31 +845,121 @@ code {
 }
 .disclaimer-box p strong { color: #aaa; }
 
-/* ===== VOL. 5 DASHBOARD TABLE ===== */
+/* ===== VOL. 5 DASHBOARD ===== */
+.dash-heading {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 1.6rem;
+}
+
+/* KPI Cards */
+.dash-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+.dash-kpi {
+  background: #13171f;
+  border: 1px solid #1e2530;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+.dash-kpi:hover {
+  background: #171c26;
+  border-color: #2a3242;
+}
+.dash-kpi-alert {
+  border-color: rgba(204,82,0,0.35);
+  background: rgba(204,82,0,0.05);
+}
+.dash-kpi-alert:hover {
+  background: rgba(204,82,0,0.09);
+  border-color: rgba(204,82,0,0.55);
+}
+.dash-kpi-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: #CC5200;
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+.dash-kpi-alert .dash-kpi-value { color: #E8682A; }
+.dash-kpi-label {
+  display: block;
+  font-size: 0.74rem;
+  color: #7a8499;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* Tab buttons */
+.dash-tabs-wrap {
+  background: #0f1218;
+  border: 1px solid #1e2530;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.dash-tab-btns {
+  display: flex;
+  border-bottom: 1px solid #1e2530;
+  background: #0a0c10;
+}
+.dash-tab-btn {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #5a6278;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  transition: color 0.18s, border-color 0.18s;
+  margin-bottom: -1px;
+}
+.dash-tab-btn:hover { color: #c8cad4; }
+.dash-tab-btn.active {
+  color: #CC5200;
+  border-bottom-color: #CC5200;
+}
+
+/* Tab panels */
+.dash-tab-panel { display: none; padding: 0.25rem 0; }
+.dash-tab-panel.active { display: block; }
+
+/* Table inside tabs */
 .v5-dash-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.82rem;
-  margin-bottom: 0.3rem;
-}
-.v5-dash-table thead tr {
-  border-bottom: 1px solid #CC5200;
 }
 .v5-dash-table th {
-  padding: 0.55rem 0.75rem;
+  padding: 0.6rem 1rem;
   text-align: left;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   color: #CC5200;
+  border-bottom: 1px solid #1e2530;
+  background: #0a0c10;
 }
 .v5-dash-table td {
-  padding: 0.5rem 0.75rem;
-  color: #c8c8c8;
-  border-bottom: 1px solid #1e1e1e;
+  padding: 0.65rem 1rem;
+  color: #b8bcc8;
+  border-bottom: 1px solid #13171f;
   vertical-align: top;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 .v5-dash-table td:nth-child(2) {
   color: #E8682A;
@@ -877,19 +967,34 @@ code {
   white-space: nowrap;
 }
 .v5-dash-table td:nth-child(3) {
-  color: #666;
+  color: #5a6278;
   font-size: 0.78rem;
 }
-.v5-dash-table tbody tr:hover td {
-  background: #161616;
+.v5-dash-table tbody tr:last-child td { border-bottom: none; }
+.v5-dash-table tbody tr {
+  transition: background 0.15s;
 }
-.v5-dash-table tr.v5-alert td {
-  background: rgba(204, 82, 0, 0.06);
+.v5-dash-table tbody tr:hover td { background: #13171f; }
+.v5-dash-table tr.v5-alert td { background: rgba(204,82,0,0.05); }
+.v5-dash-table tr.v5-alert td:first-child { border-left: 2px solid #CC5200; }
+.v5-dash-table tr.v5-alert:hover td { background: rgba(204,82,0,0.09); }
+.v5-dash-table tr.v5-total td {
+  font-weight: 600;
+  color: #dde0e8;
+  border-top: 1px solid #1e2530;
+  border-bottom: 1px solid #1e2530;
 }
-.v5-dash-table tr.v5-alert td:first-child {
-  border-left: 2px solid #CC5200;
+
+.dash-source {
+  font-size: 0.71rem;
+  color: #3a4255;
+  margin-top: 0.5rem;
+  line-height: 1.6;
 }
+
 @media (max-width: 700px) {
-  .v5-dash-table { font-size: 0.75rem; }
-  .v5-dash-table td, .v5-dash-table th { padding: 0.4rem 0.5rem; }
+  .dash-kpi-row { grid-template-columns: 1fr 1fr; }
+  .dash-kpi-value { font-size: 1.45rem; }
+  .v5-dash-table td, .v5-dash-table th { padding: 0.5rem 0.65rem; font-size: 0.75rem; }
+  .dash-tab-btn { font-size: 0.7rem; padding: 0.6rem 0.5rem; }
 }

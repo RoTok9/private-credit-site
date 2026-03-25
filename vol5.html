@@ -57,59 +57,91 @@
   </div>
 
   <!-- ── INLINE DASHBOARD ── -->
-  <section class="section" id="dashboard" style="padding-bottom:0">
+  <section class="section" id="dashboard" style="padding-bottom:0.5rem">
     <div class="container">
-      <p class="section-eyebrow" style="margin-bottom:0.6rem">Vol. 5 — Key Metrics Dashboard</p>
-      <h2 style="font-family:var(--font-display);font-size:1.35rem;color:var(--text-primary);margin-bottom:1.5rem">Liquidity &amp; Redemption — Current State (March 2026)</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.5rem;margin-bottom:2rem">
+      <p class="section-eyebrow" style="margin-bottom:0.5rem">Vol. 5 — Key Metrics Dashboard</p>
+      <h2 class="dash-heading">Liquidity &amp; Redemption — Current State (March 2026)</h2>
 
-        <!-- Left column -->
-        <div>
-          <table class="v5-dash-table">
-            <thead><tr><th>Metric</th><th>Value</th></tr></thead>
-            <tbody>
-              <tr><td>Non-Traded BDC AUM (2025)</td><td>$130B</td></tr>
-              <tr><td>Interval Credit Fund AUM (2025)</td><td>$118B</td></tr>
-              <tr><td>ELTIF AUM — Europe (2025)</td><td>$45B</td></tr>
-              <tr><td>Semi-Liquid Vehicle Total</td><td>$293B</td></tr>
-              <tr><td>Growth Since 2018</td><td>11× (from ~$25B)</td></tr>
-              <tr><td>Typical Quarterly Gate Cap</td><td>5% of NAV</td></tr>
-            </tbody>
-          </table>
+      <!-- KPI STAT CARDS -->
+      <div class="dash-kpi-row">
+        <div class="dash-kpi">
+          <span class="dash-kpi-value">$293B</span>
+          <span class="dash-kpi-label">Semi-Liquid Vehicle AUM (2025)</span>
         </div>
-
-        <!-- Right column -->
-        <div>
-          <table class="v5-dash-table">
-            <thead><tr><th>Metric</th><th>Value</th></tr></thead>
-            <tbody>
-              <tr class="v5-alert"><td>Apollo ADS Redemption Request (Mar 2026)</td><td>11.2% of NAV</td></tr>
-              <tr class="v5-alert"><td>Ares SIF Redemption Request (Mar 2026)</td><td>11.6% of NAV</td></tr>
-              <tr><td>Blackstone BCRED Capital Injection</td><td>$400M</td></tr>
-              <tr><td>Avg Asset Duration (Direct Lending)</td><td>5–7 years</td></tr>
-              <tr><td>Avg Redemption Window</td><td>Quarterly (~90 days)</td></tr>
-              <tr><td>Credit Secondaries Volume (2025)</td><td>$20B</td></tr>
-            </tbody>
-          </table>
+        <div class="dash-kpi dash-kpi-alert">
+          <span class="dash-kpi-value">11.2%</span>
+          <span class="dash-kpi-label">Apollo ADS Redemption Request vs. 5% Cap</span>
         </div>
-
-        <!-- Full-width bottom row -->
-        <div style="grid-column:1/-1">
-          <table class="v5-dash-table">
-            <thead><tr><th>Metric</th><th>Value</th><th>Context</th></tr></thead>
-            <tbody>
-              <tr class="v5-alert"><td>BDC P/NAV Range — Q1 2026</td><td>0.54× – 0.82×</td><td>FSK at 0.54×; ARCC most resilient at 0.82×</td></tr>
-              <tr class="v5-alert"><td>Secondary Market Bid — Mar 2026 (Est.)</td><td>68¢ – 78¢ on dollar</td><td>vs. 90–96¢ in normal markets; GP-led process required</td></tr>
-              <tr><td>Duration–Redemption Gap</td><td>~5.5 years</td><td>Core structural mismatch driving queue compounding</td></tr>
-              <tr><td>Retail / HNW Share of LP Base</td><td>~20%</td><td>Highest redemption pressure relative to institutional</td></tr>
-            </tbody>
-          </table>
+        <div class="dash-kpi dash-kpi-alert">
+          <span class="dash-kpi-value">11.6%</span>
+          <span class="dash-kpi-label">Ares SIF Redemption Request vs. 5% Cap</span>
         </div>
-
+        <div class="dash-kpi dash-kpi-alert">
+          <span class="dash-kpi-value">0.54×</span>
+          <span class="dash-kpi-label">Lowest BDC P/NAV (FSK, Q1 2026)</span>
+        </div>
+        <div class="dash-kpi dash-kpi-alert">
+          <span class="dash-kpi-value">68¢</span>
+          <span class="dash-kpi-label">Secondary Bid Floor — Mar 2026 (Est.)</span>
+        </div>
+        <div class="dash-kpi">
+          <span class="dash-kpi-value">5.5 yr</span>
+          <span class="dash-kpi-label">Duration–Redemption Mismatch</span>
+        </div>
       </div>
-      <p style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.5rem">
-        Sources: SEC filings · AIMA 2025 · Preqin · Apollo/Ares/BX fund disclosures · Evercore Secondaries · Jefferies · Setter Capital · PCI research
-      </p>
+
+      <!-- TABBED TABLE -->
+      <div class="dash-tabs-wrap">
+        <div class="dash-tab-btns" role="tablist">
+          <button class="dash-tab-btn active" data-tab="aum" role="tab">Vehicle AUM</button>
+          <button class="dash-tab-btn" data-tab="crisis" role="tab">Crisis Events</button>
+          <button class="dash-tab-btn" data-tab="pricing" role="tab">Market Pricing</button>
+        </div>
+
+        <div class="dash-tab-panel active" id="tab-aum">
+          <table class="v5-dash-table">
+            <thead><tr><th>Vehicle</th><th>AUM (2025)</th><th>Note</th></tr></thead>
+            <tbody>
+              <tr><td>Non-Traded BDCs (US)</td><td>$130B</td><td>Distributed via wealth management platforms (Merrill, Morgan Stanley, UBS)</td></tr>
+              <tr><td>Interval Credit Funds (US)</td><td>$118B</td><td>Quarterly redemptions capped at 5% of NAV per period</td></tr>
+              <tr><td>ELTIFs (Europe)</td><td>$45B</td><td>Semi-annual redemption; AIFMD-governed; growing retail access post-2023 reform</td></tr>
+              <tr class="v5-total"><td>Total Semi-Liquid AUM</td><td>$293B</td><td>11× growth from ~$25B in 2018; retail-driven surge</td></tr>
+              <tr><td>Growth Since 2022 (3-yr)</td><td>~2×</td><td>Accelerated by high-yield environment and wealth channel expansion</td></tr>
+              <tr><td>Standard Quarterly Gate Cap</td><td>5% of NAV</td><td>Designed for normal outflows (~2–3%); insufficient in stress</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="dash-tab-panel" id="tab-crisis">
+          <table class="v5-dash-table">
+            <thead><tr><th>Event</th><th>Scale</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr class="v5-alert"><td>Apollo Debt Solutions — Redemption Gate (Mar 2026)</td><td>11.2% of NAV requested</td><td>5% cap triggered; ~6.2% queued into backlog</td></tr>
+              <tr class="v5-alert"><td>Ares Strategic Income Fund — Redemption Gate (Mar 2026)</td><td>11.6% of NAV requested</td><td>5% cap triggered; excess deferred to Q2 2026</td></tr>
+              <tr class="v5-alert"><td>Blackstone BCRED — Capital Injection</td><td>$400M injected by BX</td><td>Sponsor support to stabilise NAV and prevent gate trigger</td></tr>
+              <tr><td>BREIT Precedent (Nov 2022 – 2023)</td><td>$8B redemption backlog</td><td>Gates ran 4 consecutive quarters; resolved via $4B BX injection</td></tr>
+              <tr><td>COVID Interval Fund Gates (Mar 2020)</td><td>~$45B AUM affected</td><td>Multiple funds triggered caps within 2 weeks of market dislocation</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="dash-tab-panel" id="tab-pricing">
+          <table class="v5-dash-table">
+            <thead><tr><th>Metric</th><th>Current (Mar 2026)</th><th>Normal Range</th></tr></thead>
+            <tbody>
+              <tr class="v5-alert"><td>BDC P/NAV — FSK (lowest)</td><td>0.54×</td><td>0.85–0.95× historical avg</td></tr>
+              <tr class="v5-alert"><td>BDC P/NAV — BXSL</td><td>0.74×</td><td>1.05–1.12× at peak (2022)</td></tr>
+              <tr class="v5-alert"><td>BDC P/NAV — ORCC</td><td>0.68×</td><td>0.98–1.04× in 2023–24</td></tr>
+              <tr><td>BDC P/NAV — ARCC (most resilient)</td><td>0.82×</td><td>0.96–1.08× historical avg</td></tr>
+              <tr class="v5-alert"><td>Credit Secondary Bid (direct lending)</td><td>68–78¢ on dollar</td><td>90–96¢ in normal markets</td></tr>
+              <tr><td>Credit Secondary Bid (COVID trough)</td><td>68–78¢ on dollar</td><td>Similar floor; recovered to 80–84¢ within 2 quarters</td></tr>
+              <tr><td>Credit Secondaries Market Volume (2025)</td><td>$20B</td><td>$10.9B in 2024; GP-led +202% YoY</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="dash-source">Sources: SEC filings · AIMA 2025 · Preqin · Apollo/Ares/BX fund disclosures · Evercore Secondaries · Jefferies · Setter Capital · PCI research</p>
     </div>
   </section>
   <!-- ── END DASHBOARD ── -->
@@ -186,5 +218,15 @@
 
   <script src="js/gate.js"></script>
   <script src="js/vol-nav.js"></script>
+  <script>
+    document.querySelectorAll('.dash-tab-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.dash-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+        document.querySelectorAll('.dash-tab-panel').forEach(function(p) { p.classList.remove('active'); });
+        btn.classList.add('active');
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
