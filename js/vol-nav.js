@@ -1,4 +1,27 @@
-// vol-nav.js — back-to-top + lightbox
+// vol-nav.js — back-to-top + lightbox + vol-tabs edge scroll
+
+// Vol-tabs edge-hover auto-scroll
+(function () {
+  var tabBar = document.querySelector('.vol-tabs');
+  if (!tabBar) return;
+  var scrollRaf = null;
+  var EDGE = 100;
+  var SPEED = 6;
+
+  tabBar.addEventListener('mousemove', function (e) {
+    var rect = tabBar.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    if (scrollRaf) { cancelAnimationFrame(scrollRaf); scrollRaf = null; }
+    if (x < EDGE) {
+      (function loop() { tabBar.scrollLeft -= SPEED; scrollRaf = requestAnimationFrame(loop); })();
+    } else if (x > rect.width - EDGE) {
+      (function loop() { tabBar.scrollLeft += SPEED; scrollRaf = requestAnimationFrame(loop); })();
+    }
+  });
+  tabBar.addEventListener('mouseleave', function () {
+    if (scrollRaf) { cancelAnimationFrame(scrollRaf); scrollRaf = null; }
+  });
+})();
 
 // Back to top
 (function () {
