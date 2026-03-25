@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Private Credit Index</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">PCI<span class="accent">.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="analysis.html">Research</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="section-eyebrow">About This Project</p>
+      <h1>Who Built This &amp; Why</h1>
+      <p class="page-header-sub">Independent research built outside the classroom — motivated by a gap between how private credit is taught and what is actually happening structurally in the market.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container about-layout">
+
+      <!-- THE RESEARCHER -->
+      <div class="about-block">
+        <div class="about-block-label">The Researcher</div>
+        <div class="about-block-content">
+          <p>This project was built by a junior finance student at a US business school (Class of 2027), with a focus on credit markets, liquidity risk, and quantitative analysis. The work is entirely independent — not affiliated with any course, professor, or institution.</p>
+          <p>Academic and professional background includes:</p>
+          <ul class="about-list">
+            <li>Treasury and liquidity risk analysis — shadowed a VP of Treasury at a large regional healthcare system, evaluating 100+ investment opportunities on risk-return and credit metrics</li>
+            <li>Private equity modeling — completed LBO, DCF, and SaaS financial models through the Wharton x Wall Street Prep PE Certification, with emphasis on leverage sensitivity and downside scenarios</li>
+            <li>Competitive trading — led a team to a university-record 8.7% return in a simulated $1M portfolio challenge, managing market risk exposure across a multi-asset book</li>
+            <li>Investment banking pitch competition — led a team that built a full buyout model (leverage, IRR sensitivity, downside protection) and presented to a panel of PE and IB professionals</li>
+            <li>Campus leadership — VP of Private Equity &amp; Investment Banking at a university finance association, advising peers on recruiting and deal processes</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- WHY THIS PROJECT -->
+      <div class="about-block">
+        <div class="about-block-label">Why This Project</div>
+        <div class="about-block-content">
+          <p>Private credit is one of the fastest-growing and least transparent segments of global finance. Most coverage is either sell-side marketing or academic work written years after the fact. The goal here was to build something closer to what an analyst at a credit fund or research desk would actually produce — original data synthesis, charted and documented in real time as the market evolves.</p>
+          <p>The project started as an attempt to understand the structural opacity in default rate reporting — where the same market produces readings from 0.75% to 9.2% depending on methodology. It grew into five volumes covering market structure, firm-level credit quality, ratings divergence, and most recently, the liquidity architecture that is actively breaking down in early 2026.</p>
+          <p>The research is not investment advice. It is a working demonstration of what independent analytical thinking looks like when applied systematically to a complex, data-sparse market.</p>
+        </div>
+      </div>
+
+      <!-- RESEARCH ARC -->
+      <div class="about-block">
+        <div class="about-block-label">Research Arc</div>
+        <div class="about-block-content">
+          <div class="about-volumes">
+            <div class="about-vol">
+              <span class="about-vol-num">Vol. 1</span>
+              <div>
+                <strong>Market Overview</strong>
+                <p>Baseline heatmaps, leverage and dry powder trends, index tables. Established the analytical framework and data pipeline used in all subsequent volumes.</p>
+              </div>
+            </div>
+            <div class="about-vol">
+              <span class="about-vol-num">Vol. 2</span>
+              <div>
+                <strong>Firm Deep-Dives &amp; PIK Risk</strong>
+                <p>Manager-level analysis across Apollo, Ares, Blackstone, Blue Owl, and others. Introduced PIK loan tracking as a shadow default proxy — before it became mainstream coverage.</p>
+              </div>
+            </div>
+            <div class="about-vol">
+              <span class="about-vol-num">Vol. 2.5</span>
+              <div>
+                <strong>Roll-Up PIK Audit</strong>
+                <p>Focused audit of roll-up company structures — a specific category of sponsor-backed borrowers with elevated PIK exposure and compressed coverage ratios.</p>
+              </div>
+            </div>
+            <div class="about-vol">
+              <span class="about-vol-num">Vol. 3</span>
+              <div>
+                <strong>Credit Ratings Deep-Dive</strong>
+                <p>Systematic comparison of Moody's, S&amp;P, Fitch, and KBRA ratings methodologies applied to private credit — and why they diverge by up to 12× on the same underlying market.</p>
+              </div>
+            </div>
+            <div class="about-vol">
+              <span class="about-vol-num">Vol. 4</span>
+              <div>
+                <strong>Market Structure Deep-Dive</strong>
+                <p>Spread compression, CLO formation records, credit secondaries surge, AUM by strategy, and the retail capital influx reshaping the investor base.</p>
+              </div>
+            </div>
+            <div class="about-vol">
+              <span class="about-vol-num">Vol. 5</span>
+              <div>
+                <strong>Liquidity &amp; Redemption Architecture</strong>
+                <p>The structural mechanics of why private credit funds are exposed to redemption shocks — and the real-time evidence from Apollo, Ares, and Blackstone in March 2026.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TECH STACK -->
+      <div class="about-block">
+        <div class="about-block-label">Built With</div>
+        <div class="about-block-content">
+          <p>All analysis, charts, and data processing were built from scratch using the following tools:</p>
+          <div class="tech-grid" style="margin-top:1rem">
+            <div class="tech-item"><code>R</code><span>Core analysis language</span></div>
+            <div class="tech-item"><code>ggplot2</code><span>Chart production (all PNGs)</span></div>
+            <div class="tech-item"><code>dplyr / tidyr</code><span>Data manipulation</span></div>
+            <div class="tech-item"><code>FRED API</code><span>Live macro data (spreads, rates)</span></div>
+            <div class="tech-item"><code>quantmod</code><span>BDC &amp; ETF price data</span></div>
+            <div class="tech-item"><code>R Shiny</code><span>Local live dashboard</span></div>
+            <div class="tech-item"><code>openxlsx</code><span>Excel report generation</span></div>
+            <div class="tech-item"><code>GitHub Pages</code><span>Hosting &amp; deployment</span></div>
+          </div>
+          <p style="margin-top:1.25rem;font-size:0.83rem;color:var(--text-muted)">The live dashboard runs locally via R Shiny, pulling FRED data every 5 minutes and tracking BDC prices, HY/IG spreads, the yield curve, and alt manager performance in real time.</p>
+        </div>
+      </div>
+
+      <!-- DISCLAIMER -->
+      <div class="about-block" style="border-bottom:none">
+        <div class="about-block-label">Disclaimer</div>
+        <div class="about-block-content">
+          <p style="color:var(--text-muted);font-size:0.83rem;line-height:1.7">This website is independent academic and educational work. It does not constitute investment advice, a solicitation, or a recommendation to buy or sell any security. All data is sourced from publicly available information and is presented for informational purposes only. Research volumes 2–5 are password-protected and intended for professional audiences. The author has no affiliation with any of the firms, funds, or data providers mentioned.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="nav-logo">PCI<span class="accent">.</span></span>
+      <p>Private Credit Index — Vol. 1–5 &mdash; Independent Research, March 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -12,7 +12,7 @@
 
   <nav class="nav">
     <div class="nav-inner">
-      <div class="nav-logo">PCM<span class="accent">.</span></div>
+      <div class="nav-logo">PCI<span class="accent">.</span></div>
       <ul class="nav-links">
         <li><a href="index.html">Overview</a></li>
         <li><a href="analysis.html">Analysis</a></li>
@@ -51,26 +51,26 @@
         <div class="method-num">02</div>
         <div class="method-content">
           <h3>Data Pipeline</h3>
-          <p>Raw data is processed through a Python-based pipeline built in VS Code. The workflow is as follows:</p>
+          <p>All data processing, analysis, and chart production is built in R. The workflow for each volume is as follows:</p>
           <div class="pipeline-steps">
             <div class="pipeline-step">
               <span class="step-label">Ingestion</span>
-              <p>CSV and JSON files are pulled from source APIs or uploaded manually, then validated for completeness and format consistency using <code>pandas</code>.</p>
+              <p>Public data series are pulled via the <code>fredr</code> package (FRED API) and <code>quantmod</code> (equity/ETF prices). Supplementary data from fund disclosures and industry reports is manually structured into R data frames.</p>
             </div>
             <div class="pipeline-arrow">↓</div>
             <div class="pipeline-step">
-              <span class="step-label">Cleaning & Normalization</span>
-              <p>Outlier detection, missing value imputation, and field standardization (e.g., unifying sector tags across data providers).</p>
+              <span class="step-label">Cleaning &amp; Normalization</span>
+              <p>Data is cleaned and reshaped using <code>dplyr</code> and <code>tidyr</code> — handling missing periods, normalizing date formats, and reconciling metrics across sources (e.g., unifying default rate definitions across Fitch, Proskauer, Lincoln, and Cliffwater).</p>
             </div>
             <div class="pipeline-arrow">↓</div>
             <div class="pipeline-step">
-              <span class="step-label">Feature Engineering</span>
-              <p>Derived metrics including net spread (all-in yield minus base rate), leverage ratios, rolling averages, and YoY deltas.</p>
+              <span class="step-label">Analysis &amp; Visualization</span>
+              <p>Charts are produced using <code>ggplot2</code> with a consistent dark theme (black/orange palette). Each volume's R script outputs a set of publication-quality PNGs deployed directly to the site.</p>
             </div>
             <div class="pipeline-arrow">↓</div>
             <div class="pipeline-step">
-              <span class="step-label">Export</span>
-              <p>Processed data is saved to <code>/data/*.json</code> files, which are read directly by the website's JavaScript layer.</p>
+              <span class="step-label">Live Monitoring</span>
+              <p>A local <code>R Shiny</code> dashboard refreshes every 5 minutes, pulling live FRED data and BDC/ETF prices via <code>quantmod::getQuote()</code> — tracking HY/IG spreads, the yield curve, BDC P/NAV, and alt manager performance in real time.</p>
             </div>
           </div>
         </div>
@@ -107,14 +107,16 @@
       <div class="method-block">
         <div class="method-num">05</div>
         <div class="method-content">
-          <h3>Tools & Technologies</h3>
+          <h3>Tools &amp; Technologies</h3>
           <div class="tech-grid">
-            <div class="tech-item"><code>Python 3.11</code><span>Core analysis language</span></div>
-            <div class="tech-item"><code>pandas</code><span>Data manipulation</span></div>
-            <div class="tech-item"><code>NumPy</code><span>Numerical computation</span></div>
-            <div class="tech-item"><code>Chart.js</code><span>Web visualizations</span></div>
-            <div class="tech-item"><code>VS Code</code><span>Development environment</span></div>
-            <div class="tech-item"><code>GitHub Pages</code><span>Hosting & deployment</span></div>
+            <div class="tech-item"><code>R 4.5</code><span>Core analysis language</span></div>
+            <div class="tech-item"><code>ggplot2</code><span>Chart production (all PNGs)</span></div>
+            <div class="tech-item"><code>dplyr / tidyr</code><span>Data manipulation</span></div>
+            <div class="tech-item"><code>fredr</code><span>FRED API — live macro data</span></div>
+            <div class="tech-item"><code>quantmod</code><span>BDC &amp; ETF price data</span></div>
+            <div class="tech-item"><code>R Shiny</code><span>Local live dashboard</span></div>
+            <div class="tech-item"><code>openxlsx</code><span>Excel report generation</span></div>
+            <div class="tech-item"><code>GitHub Pages</code><span>Hosting &amp; deployment</span></div>
           </div>
         </div>
       </div>
@@ -124,8 +126,8 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span class="nav-logo">PCM<span class="accent">.</span></span>
-      <p>Private Credit Market Analysis — Independent Research Project</p>
+      <span class="nav-logo">PCI<span class="accent">.</span></span>
+      <p>Private Credit Index — Vol. 1–5 — Independent Research, March 2026</p>
       <p class="footer-note">Data updated continuously via automated pipeline.</p>
     </div>
   </footer>
