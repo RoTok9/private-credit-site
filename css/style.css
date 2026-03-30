@@ -1094,6 +1094,72 @@ code {
   .audit-pipeline-grid { grid-template-columns: 1fr; }
 }
 
+/* ===== AUDIT CONTEXT BOX ===== */
+.audit-context-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+}
+.audit-context-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: block;
+}
+.audit-context-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.audit-context-stat {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.audit-context-desc {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  line-height: 1.5;
+}
+.audit-context-note {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+/* ===== AUDIT PIPELINE LIVE ALERT ===== */
+.audit-pipeline-live {
+  border-left: 3px solid var(--red);
+}
+/* ===== AUDIT STATUS BADGES (extended) ===== */
+.audit-status-queue {
+  background: rgba(204, 82, 0, 0.12);
+  color: var(--accent-light);
+  border: 1px solid rgba(204, 82, 0, 0.3);
+}
+.audit-status-alert {
+  background: rgba(192, 57, 43, 0.15);
+  color: var(--red);
+  border: 1px solid rgba(192, 57, 43, 0.3);
+}
+.audit-card-queue {
+  border-left-color: var(--border-light);
+}
+@media (max-width: 768px) {
+  .audit-context-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ===== DISCLAIMER ===== */
 .disclaimer-section { padding: 1rem 0 0; }
 .disclaimer-box {
