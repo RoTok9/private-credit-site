@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library — Private Credit Index</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ── Memos library — page-scoped styles ── */
+    .memo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.75rem;
+      position: relative;
+    }
+    .memo-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 0.9rem;
+    }
+    .memo-card-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.25;
+    }
+    .memo-card-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+    .memo-card-meta {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+    .memo-card-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .memo-card-meta strong {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .memo-abstract {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 1.1rem;
+    }
+    .memo-toc {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.35rem 1.5rem;
+      margin: 1rem 0 1.25rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem 1.1rem;
+    }
+    .memo-toc-item {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      display: flex;
+      gap: 0.45rem;
+    }
+    .memo-toc-num {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      padding-top: 0.05rem;
+    }
+    .memo-tag-row {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.1rem;
+    }
+    .memo-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      background: rgba(204, 82, 0, 0.1);
+      color: var(--accent-light);
+      border: 1px solid rgba(204, 82, 0, 0.2);
+    }
+    .memo-tag-red {
+      background: rgba(192, 57, 43, 0.1);
+      color: var(--red);
+      border-color: rgba(192, 57, 43, 0.25);
+    }
+    .memo-tag-neutral {
+      background: rgba(138, 146, 166, 0.1);
+      color: var(--text-secondary);
+      border-color: var(--border);
+    }
+    .memo-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .memo-stat-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .memo-stat {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+    .memo-stat strong {
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin-right: 0.3rem;
+    }
+    .memo-read-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.5rem 1.2rem;
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+    .memo-read-btn:hover { background: var(--accent-light); }
+    .memo-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .memo-badge-published {
+      background: rgba(76, 175, 130, 0.15);
+      color: var(--green);
+      border: 1px solid rgba(76, 175, 130, 0.3);
+    }
+    .memo-section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin: 2.5rem 0 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .memo-section-header h2 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--text-primary);
+    }
+    .memo-section-count {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .memo-about-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.75rem;
+      margin-bottom: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .memo-about-item {}
+    .memo-about-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+    .memo-about-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    @media (max-width: 768px) {
+      .memo-toc { grid-template-columns: 1fr; }
+      .memo-about-box { grid-template-columns: 1fr; }
+      .memo-card-header { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">PCI<span class="accent">.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="analysis.html">Research</a></li>
+        <li><a href="audits.html">Fund Audits</a></li>
+        <li><a href="insurance-audits.html">Insurance Audits</a></li>
+        <li><a href="library.html" class="active">Library</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="section-eyebrow">Independent Research — Memoranda Library</p>
+      <h1>Library</h1>
+      <p class="page-header-sub">A consolidated library of independent research memoranda covering private credit default dynamics, PE-insurance systemic risk, cascade mechanics, hedge positioning, and primary source intelligence. Each memo is a standalone analytical document — print-ready, sourced, and written for a professional audience.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- ABOUT THIS SERIES -->
+      <div class="memo-about-box">
+        <div class="memo-about-item">
+          <div class="memo-about-label">Format &amp; Purpose</div>
+          <div class="memo-about-desc">Each memorandum is a self-contained research document written in the style of a professional analyst memo — structured sections, supporting data tables, and direct conclusions. They are designed to be read cover-to-cover, printed to PDF, and shared with professional audiences. Password protection is not applied to memos; the full text is available here.</div>
+        </div>
+        <div class="memo-about-item">
+          <div class="memo-about-label">Research Standards</div>
+          <div class="memo-about-desc">All data is sourced from publicly available filings, rating agency reports, regulatory publications, and independent analysis. No proprietary data is used. Sources are cited inline within each document. Memos are updated when material new information becomes available; the version date is shown on each entry.</div>
+        </div>
+        <div class="memo-about-item">
+          <div class="memo-about-label">Scope</div>
+          <div class="memo-about-desc">The memo series runs in parallel with the volume research and forensic audit tracks. Volumes cover market-wide data and firm-level analysis. Audits cover bottom-up forensic examination of specific funds or insurers. Memos synthesize findings into investable theses, systemic risk assessments, and actionable intelligence frameworks.</div>
+        </div>
+        <div class="memo-about-item">
+          <div class="memo-about-label">Disclaimer</div>
+          <div class="memo-about-desc">All memoranda are independent academic and educational research. They do not constitute investment advice, a solicitation, or a recommendation to buy or sell any security or insurance product. The author has no affiliation with any firm, fund, or data provider referenced herein.</div>
+        </div>
+      </div>
+
+      <!-- PUBLISHED -->
+      <div class="memo-section-header">
+        <h2>Published</h2>
+        <span class="memo-section-count">2 memos — March 2026</span>
+      </div>
+
+      <!-- MEMO 2 — PE-INSURANCE -->
+      <div class="memo-card">
+        <div class="memo-card-header">
+          <div>
+            <div class="memo-card-title">The PE-Insurance Nexus —<br>Systemic Risk, Cascade Mechanics &amp; Positioning</div>
+            <div class="memo-card-subtitle">Insurance Audits Series &mdash; Memorandum #2</div>
+          </div>
+          <span class="memo-badge memo-badge-published">Published</span>
+        </div>
+
+        <div class="memo-card-meta">
+          <span><strong>Date:</strong> March 30, 2026</span>
+          <span><strong>Sections:</strong> XIV</span>
+          <span><strong>Series:</strong> Insurance Audits</span>
+          <span><strong>Companion:</strong> Athene/Apollo Audit #1</span>
+        </div>
+
+        <p class="memo-abstract">The largest private equity firms have built a second financial system inside the U.S. insurance sector — accessing $500B+ in long-duration policyholder capital, deploying it into their own proprietary credit products, and earning management fees on the same assets they mark at Level 3. This memo documents the full architecture of the PE-insurance loop, why the NAIC's Risk-Based Capital ratios systematically understate economic risk, how stress transmits from insurance general accounts into bank balance sheets and institutional investor portfolios, what containment would require and why it will arrive too late, and how to position across the thesis over a 2–5 year horizon. Includes primary source elicitation tactics for actuaries, state regulators, pension trustees, and FABN market participants.</p>
+
+        <div class="memo-toc">
+          <div class="memo-toc-item"><span class="memo-toc-num">I.</span> Executive Summary — Why This Is the Next Systemic Risk</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">II.</span> The Architecture — How the Loop Works</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">III.</span> Key Metrics and Risk Indicators — What to Watch</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">IV.</span> The NAIC Designation Arbitrage — Why RBC Ratios Are Misleading</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">V.</span> The Cascade Mechanism — How Stress Propagates</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">VI.</span> Market Positioning — How to Express This Thesis</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">VII.</span> The Regulatory Trajectory — What Is Coming and When</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">VIII.</span> Knowing Complacency in the Insurance Context</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">IX.</span> Primary Source Intelligence — Elicitation Framework</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">X.</span> Timing and Catalysts — The Triggering Events</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">XI.</span> Mitigation — What Containment Actually Requires</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">XII.</span> Bank Exposure — How This Reaches the Banking System</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">XIII.</span> University Endowments &amp; Pensions — The Captive Investor Base</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">XIV.</span> The Benign Scenario — What Would Disprove This Thesis</div>
+        </div>
+
+        <div class="memo-tag-row">
+          <span class="memo-tag memo-tag-red">Systemic Risk</span>
+          <span class="memo-tag memo-tag-red">PE-Insurance Nexus</span>
+          <span class="memo-tag">Athene / Apollo</span>
+          <span class="memo-tag">RBC Integrity</span>
+          <span class="memo-tag">Circular Capital Flows</span>
+          <span class="memo-tag">NAIC Designation Arbitrage</span>
+          <span class="memo-tag">FABN Liquidity Risk</span>
+          <span class="memo-tag">Bermuda Reinsurance</span>
+          <span class="memo-tag">Bank Exposure Channels</span>
+          <span class="memo-tag">Endowment &amp; Pension Risk</span>
+          <span class="memo-tag">Mitigation Analysis</span>
+          <span class="memo-tag memo-tag-neutral">5-Leg Hedge Structure</span>
+          <span class="memo-tag memo-tag-neutral">Primary Source Intelligence</span>
+        </div>
+
+        <div class="memo-card-footer">
+          <div class="memo-stat-row">
+            <div class="memo-stat"><strong>~$500B</strong> PE-affiliated general account assets in scope</div>
+            <div class="memo-stat"><strong>5</strong> bank exposure transmission channels</div>
+            <div class="memo-stat"><strong>6</strong> mitigation requirements analyzed</div>
+            <div class="memo-stat"><strong>XIV</strong> sections &mdash; 9 primary-source tactics</div>
+          </div>
+          <a href="Memorandum%20%E2%80%94%20PE-Insurance%20Systemic%20Risk.html" class="memo-read-btn">Read Memorandum &rarr;</a>
+        </div>
+      </div>
+
+      <!-- MEMO 1 — PRIVATE CREDIT -->
+      <div class="memo-card">
+        <div class="memo-card-header">
+          <div>
+            <div class="memo-card-title">Private Credit Default Cycle —<br>Cascade Mechanics, Positioning &amp; Intelligence</div>
+            <div class="memo-card-subtitle">Fund Audits Series &mdash; Memorandum #1</div>
+          </div>
+          <span class="memo-badge memo-badge-published">Published</span>
+        </div>
+
+        <div class="memo-card-meta">
+          <span><strong>Date:</strong> March 25, 2026</span>
+          <span><strong>Sections:</strong> V</span>
+          <span><strong>Series:</strong> Fund Audits</span>
+          <span><strong>Companion:</strong> Vol. 6 — OCIC Forensic Audit</span>
+        </div>
+
+        <p class="memo-abstract">The private credit default rate is the single most important metric in the $3.5T private credit market — and the most systematically misreported. This memo documents the precise cascade mechanics that transmit a rising default rate into a systemic crisis: the PCDR thresholds that trigger each stage, why the true realized rate is plausibly 3–4% today versus the 1–2% reported, and what the observable data from OCIC, FSK, and the broader BDC universe reveals about where the cycle actually stands. Includes a three-leg hedge structure for expressing the thesis, the knowing complacency framework for understanding why sophisticated allocators are staying in despite knowing the risks, and five primary-source elicitation approaches for extracting candid practitioner views.</p>
+
+        <div class="memo-toc">
+          <div class="memo-toc-item"><span class="memo-toc-num">I.</span> The 7% PCDR Thesis — What It Actually Triggers</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">II.</span> Timing Assessment — Where We Are in the Cycle</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">III.</span> Hedge Fund Positioning — Instruments and Structure</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">IV.</span> The Knowing Complacency Thesis</div>
+          <div class="memo-toc-item"><span class="memo-toc-num">V.</span> Primary Source Intelligence — Elicitation Framework</div>
+        </div>
+
+        <div class="memo-tag-row">
+          <span class="memo-tag memo-tag-red">Default Cycle</span>
+          <span class="memo-tag memo-tag-red">Cascade Risk</span>
+          <span class="memo-tag">PCDR Threshold Analysis</span>
+          <span class="memo-tag">PIK &amp; Amend-and-Extend</span>
+          <span class="memo-tag">BDC Stress Signals</span>
+          <span class="memo-tag">Interval Fund Liquidity Gates</span>
+          <span class="memo-tag">OCIC / FSK Live Alerts</span>
+          <span class="memo-tag memo-tag-neutral">3-Leg Hedge Structure</span>
+          <span class="memo-tag memo-tag-neutral">CDX HY / OWL / BIZD</span>
+          <span class="memo-tag memo-tag-neutral">Knowing Complacency</span>
+          <span class="memo-tag memo-tag-neutral">Primary Source Intelligence</span>
+        </div>
+
+        <div class="memo-card-footer">
+          <div class="memo-stat-row">
+            <div class="memo-stat"><strong>7%</strong> PCDR systemic threshold — cascade already running before this</div>
+            <div class="memo-stat"><strong>5</strong> primary-source elicitation tactics</div>
+            <div class="memo-stat"><strong>3-leg</strong> hedge structure: CDX HY, OWL short, BIZD puts</div>
+            <div class="memo-stat"><strong>V</strong> sections</div>
+          </div>
+          <a href="Memorandum%20%E2%80%94%20Private%20Credit%20Default%20Cycle.html" class="memo-read-btn">Read Memorandum &rarr;</a>
+        </div>
+      </div>
+
+      <!-- PIPELINE -->
+      <div class="memo-section-header" style="margin-top:3rem">
+        <h2>In Development</h2>
+        <span class="memo-section-count">potential upcoming memos</span>
+      </div>
+
+      <div class="audit-pipeline-grid">
+
+        <div class="audit-pipeline-card">
+          <div class="audit-pipeline-name">The FABN Maturity Wall — A Liquidity Crisis in Slow Motion</div>
+          <div class="audit-pipeline-meta">Insurance Audits Series &mdash; Memorandum #3 (Planned)</div>
+          <p class="audit-pipeline-note">A focused analysis of the $200B+ in funding agreement-backed notes outstanding across PE-affiliated insurers — maturity schedule reconstruction, institutional buyer composition, refinancing risk under stress, and the precise sequencing of a FABN liquidity crisis. Companion to the Athene audit.</p>
+          <span class="audit-status-badge audit-status-planned">Planned</span>
+        </div>
+
+        <div class="audit-pipeline-card">
+          <div class="audit-pipeline-name">The Endowment Illusion — Yale Model Failure in the Private Credit Cycle</div>
+          <div class="audit-pipeline-meta">Cross-Series &mdash; Memorandum #4 (Planned)</div>
+          <p class="audit-pipeline-note">A deep examination of how the endowment model's structural commitment to illiquid alternatives has created a forced-seller problem at scale. Vintage concentration, denominator effect mechanics, secondary market liquidity, and the implications for university operating budgets and financial aid programs in a 2026–2028 credit downturn.</p>
+          <span class="audit-status-badge audit-status-planned">Planned</span>
+        </div>
+
+        <div class="audit-pipeline-card">
+          <div class="audit-pipeline-name">The Regional Bank Time Bomb — Originate-to-Distribute in a Distressed Market</div>
+          <div class="audit-pipeline-meta">Cross-Series &mdash; Memorandum #5 (Planned)</div>
+          <p class="audit-pipeline-note">How hundreds of regional and mid-size banks have built fee income around originate-to-distribute partnerships with PE credit platforms — and what happens to those business models when PE buying slows. Repurchase exposure, revenue cliffs, and the secondary credit tightening effect on small business lending.</p>
+          <span class="audit-status-badge audit-status-planned">Planned</span>
+        </div>
+
+        <div class="audit-pipeline-card">
+          <div class="audit-pipeline-name">Global Atlantic / KKR — The Run-Off Reinsurer's Impossible Balance Sheet</div>
+          <div class="audit-pipeline-meta">Insurance Audits Series &mdash; Memorandum #6 (Planned)</div>
+          <p class="audit-pipeline-note">KKR completed 100% acquisition of Global Atlantic in January 2024. Global Atlantic is an active acquirer of legacy life and annuity reinsurance blocks — complex, long-dated liabilities that demand precise asset-liability matching. A forensic examination of how KKR deploys those reserves and whether the duration match holds under stress.</p>
+          <span class="audit-status-badge audit-status-planned">Planned</span>
+        </div>
+
+      </div>
+
+      <!-- DISCLAIMER -->
+      <div class="audit-disclaimer" style="margin-top:3rem">
+        <p>All memoranda are independent academic and educational research built from publicly available sources. They do not constitute investment advice, a solicitation, or a recommendation to buy, sell, or hold any security or insurance product. The author has no affiliation with any firm, fund, data provider, or institution referenced herein. Research is intended for professional audiences.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="nav-logo">PCI<span class="accent">.</span></span>
+      <p>Private Credit Index — Research Library &mdash; Independent Research, March 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>
