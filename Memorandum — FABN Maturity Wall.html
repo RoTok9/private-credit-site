@@ -598,9 +598,119 @@
   </div>
 </div>
 
-<!-- ─────────────────────────────── IV. DEMAND SIDE ─────────────────────────────── -->
+<!-- ─────────────────────────────── IV. DURATION GAP ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">IV.</span>Demand Side — Who Holds FABNs and Why It Matters</div>
+  <div class="section-title"><span class="section-num">IV.</span>The Duration Gap — Making the Mismatch Numerical</div>
+
+  <p>The maturity mismatch at the heart of the FABN problem is described consistently in regulatory commentary and analyst research as a structural vulnerability. What is described less often is its precise magnitude. The gap between FABN liability duration and alternative asset portfolio duration is not narrow — it is one of the largest duration mismatches in the US financial system, larger than anything observable in the banking sector and only loosely analogous to pre-crisis S&amp;L balance sheets.</p>
+
+  <div class="sub-heading">Duration Estimates by Asset Class</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Asset / Liability Category</th>
+        <th>Estimated Duration</th>
+        <th>Approx. Share of Portfolio</th>
+        <th>Weighted Duration Contribution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-name">FABN liabilities (1–3 year predominant)</td>
+        <td class="td-num">~1.8–2.2 years</td>
+        <td class="td-num">~37% of general account</td>
+        <td class="td-num td-alert">~0.7–0.8 years</td>
+      </tr>
+      <tr>
+        <td class="td-name">FHLB advances (&lt;1 year)</td>
+        <td class="td-num">~0.3–0.5 years</td>
+        <td class="td-num">~8% of general account</td>
+        <td class="td-num">~0.03 years</td>
+      </tr>
+      <tr>
+        <td class="td-name">Annuity reserves (deferred, 20–30 yr)</td>
+        <td class="td-num">~12–16 years</td>
+        <td class="td-num">~55% of general account</td>
+        <td class="td-num">~7–9 years</td>
+      </tr>
+      <tr>
+        <td><strong>Total Liability Duration (weighted)</strong></td>
+        <td class="td-num"><strong>~8–10 years</strong></td>
+        <td class="td-num">100%</td>
+        <td class="td-num"><strong>~8–10 years</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Asset Category</th>
+        <th>Estimated Duration</th>
+        <th>Approx. Share of Portfolio</th>
+        <th>Weighted Duration Contribution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-name">Investment-grade public credit (IG bonds)</td>
+        <td class="td-num">~5–7 years</td>
+        <td class="td-num">~35%</td>
+        <td class="td-num">~1.8–2.5 years</td>
+      </tr>
+      <tr>
+        <td class="td-name">Private credit / direct lending</td>
+        <td class="td-num">~4–6 years</td>
+        <td class="td-num">~25%</td>
+        <td class="td-num">~1.0–1.5 years</td>
+      </tr>
+      <tr>
+        <td class="td-name">CLO tranches (floating rate, short effective duration)</td>
+        <td class="td-num">~2–4 years</td>
+        <td class="td-num">~12%</td>
+        <td class="td-num">~0.2–0.5 years</td>
+      </tr>
+      <tr>
+        <td class="td-name">Infrastructure debt / project finance</td>
+        <td class="td-num">~15–25 years</td>
+        <td class="td-num">~10%</td>
+        <td class="td-num">~1.5–2.5 years</td>
+      </tr>
+      <tr>
+        <td class="td-name">Structured equity / alternatives (Fox Hedge, REIT debt)</td>
+        <td class="td-num">~20–40 years</td>
+        <td class="td-num">~8%</td>
+        <td class="td-num">~1.6–3.2 years</td>
+      </tr>
+      <tr>
+        <td class="td-name">Short-duration / liquid (Treasuries, cash)</td>
+        <td class="td-num">~0.5–2 years</td>
+        <td class="td-num">~10%</td>
+        <td class="td-num">~0.05–0.2 years</td>
+      </tr>
+      <tr>
+        <td><strong>Total Asset Duration (weighted)</strong></td>
+        <td class="td-num"><strong>~7–10 years</strong></td>
+        <td class="td-num">100%</td>
+        <td class="td-num"><strong>~7–10 years</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-heading">The FABN-Specific Duration Gap</div>
+  <p>The total balance sheet duration gap (assets vs. all liabilities) appears manageable at the macro level — insurers actively duration-match their annuity reserve book. But the aggregate figure conceals the FABN-specific problem: FABNs are a sub-liability with a duration of ~2 years funding a portfolio of alternatives with effective durations of 4–40 years. The relevant duration gap is not total assets minus total liabilities — it is the duration of the assets that were acquired using FABN proceeds, minus the duration of the FABNs themselves.</p>
+
+  <div class="alert-box">
+    <strong>The Embedded Gap at Athene:</strong> Athene's $64B FABN book at ~2-year duration funds alternatives with an estimated average duration of 10–15 years. The dollar duration gap — the sensitivity of portfolio value to a parallel rate shift — is approximately $64B × (12 years – 2 years) × 0.01 = <strong>~$6.4B per 100 basis point move in rates</strong>. This loss is not hypothetical; it occurs every time rates rise by 1%. It is absorbed by marking down Level 3 assets — but those marks are controlled by Apollo, and the loss does not appear in statutory RBC ratios. It is invisible to regulators, visible only to those who understand the structure.
+  </div>
+
+  <p>This is why the benign scenario requires the Fed to cut rates: it is not simply that rate cuts make FABNs cheaper to issue. Rate cuts reduce the mark-to-market loss already embedded in the alternative asset portfolio — losses that have been accumulating since the 2022–2023 rate cycle and that will surface in any distressed liquidation scenario.</p>
+</div>
+
+<!-- ─────────────────────────────── V. DEMAND SIDE ─────────────────────────────── -->
+<div class="section">
+  <div class="section-title"><span class="section-num">V.</span>Demand Side — Who Holds FABNs and Why It Matters</div>
 
   <p>FABNs are held predominantly by four buyer categories. Each category has a different trigger for becoming a forced or reluctant seller, and understanding these triggers is essential to understanding how a FABN rollover crisis propagates.</p>
 
@@ -625,9 +735,59 @@
   </div>
 </div>
 
-<!-- ─────────────────────────────── V. THREE FAILURE MODES ─────────────────────────────── -->
+<!-- ─────────────────────────────── VI. SEC MMF REFORM ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">V.</span>Three Failure Modes — How the Wall Breaks</div>
+  <div class="section-title"><span class="section-num">VI.</span>The 2024 MMF Reform — Why the Demand Side Is Structurally Weaker Than 2020</div>
+
+  <p>Section V identifies prime money market funds as the most credit-sensitive component of FABN demand and references the March 2020 stress episode as the operative precedent. A critical update is required: the regulatory structure governing prime MMFs changed materially in October 2024, and the change makes a future FABN rollover crisis significantly worse in structure than the 2020 episode — not better.</p>
+
+  <div class="sub-heading">What Changed — SEC Final Rule (January 2024, Effective October 2024)</div>
+  <p>The SEC's January 2024 amendments to Rule 2a-7 eliminated the discretionary redemption gates and fees that existed under the 2016 reform (which were widely criticized for accelerating outflows in 2020 because investors redeemed preemptively to avoid being gated). In their place, the SEC introduced <strong>mandatory liquidity fees</strong>: if a prime institutional MMF's daily net redemptions exceed 5% of the fund's net assets in a single day, the fund must impose a liquidity fee — equal to the cost of the liquidity it is consuming — on all redemptions that day. The fee is not discretionary. The fund board cannot waive it. It triggers automatically.</p>
+
+  <div class="sub-heading">The Doom Loop Mechanism</div>
+  <p>The mandatory liquidity fee creates a self-reinforcing exit dynamic that did not exist in 2020:</p>
+
+  <div class="stage-block red">
+    <div class="stage-block-label">Step 1</div>
+    <div class="stage-block-title">FABN Rollover Difficulty Becomes News</div>
+    <div class="stage-block-body">A PE-owned insurer discloses difficulty rolling a FABN tranche. Sophisticated institutional investors in prime MMFs — aware that their funds hold FABN paper from the affected issuer — begin redeeming to avoid being trapped in a fund that must impose a fee.</div>
+  </div>
+
+  <div class="stage-block red">
+    <div class="stage-block-label">Step 2</div>
+    <div class="stage-block-title">5% Threshold Is Crossed — Mandatory Fee Triggers</div>
+    <div class="stage-block-body">Daily redemptions exceed 5% of fund NAV. The mandatory liquidity fee activates automatically. All investors redeeming that day pay the fee — typically estimated at 1–2% of redemption amount based on the cost of liquidating the fund's least-liquid holdings.</div>
+  </div>
+
+  <div class="stage-block red">
+    <div class="stage-block-label">Step 3</div>
+    <div class="stage-block-title">Fee Announcement Accelerates Outflows</div>
+    <div class="stage-block-body">The announcement that a liquidity fee has been imposed signals to remaining investors that the fund is under redemption pressure. Investors who were considering redeeming — even those with no direct concern about FABN exposure — now redeem to avoid a fee on tomorrow's redemption. Outflows accelerate. The fee may need to be imposed on consecutive days.</div>
+  </div>
+
+  <div class="stage-block red">
+    <div class="stage-block-label">Step 4</div>
+    <div class="stage-block-title">MMF Forced to Sell FABNs — No Bid in Thin Market</div>
+    <div class="stage-block-body">To meet redemptions, the MMF must liquidate holdings. FABNs are not as liquid as Treasuries. In a stress scenario, the bid-ask spread on FABN secondary market trading widens significantly. The MMF sells at a discount, taking a loss that further erodes NAV, which may trigger additional fee thresholds.</div>
+  </div>
+
+  <div class="stage-block red">
+    <div class="stage-block-label">Step 5</div>
+    <div class="stage-block-title">FABN Secondary Market Price Discovery Forces New-Issue Re-pricing</div>
+    <div class="stage-block-body">The distressed secondary prices on existing FABNs become the market reference for new issuance. The insurer attempting to roll its next tranche must price at the secondary market level — which may be 150–300 bps wider than the prior issuance. The refinancing cost spikes at exactly the moment rollover volume is highest.</div>
+  </div>
+
+  <div class="caution-box">
+    <strong>Why 2024 Is Worse Than 2020:</strong> In 2020, the Federal Reserve launched the Money Market Mutual Fund Liquidity Facility (MMLF) within two weeks of the stress onset, providing emergency backstop liquidity. The MMLF was authorized under Section 13(3) of the Federal Reserve Act — an emergency power requiring the Fed to find "unusual and exigent circumstances." There is no standing MMLF equivalent today. A re-authorization would require the same finding, the same Treasury approval, and potentially the same political scrutiny that the 2020 emergency lending programs received in subsequent Congressional review. The backstop is not automatic — and the mandatory fee mechanism makes the run dynamics faster, not slower, than 2020.
+  </div>
+
+  <div class="sub-heading">Sector Concentration in Prime MMF Portfolios</div>
+  <p>The five PE-owned insurer FABN programs (Athene Global Funding, Global Atlantic Funding, F&amp;G Global Funding, AEL Funding, Fortitude Funding) collectively represent a significant share of prime MMF FABN holdings. If institutional prime MMFs hold an average of 8–12% of assets in PE-insurer FABN paper, and total prime institutional MMF assets are approximately $1.5 trillion, the aggregate PE-insurer FABN exposure in prime MMFs is an estimated $120–180 billion. This is not a tail position — it is a core allocation for many prime funds. A sector-wide re-pricing does not allow orderly rotation; it requires liquidation into an illiquid secondary market simultaneously across all funds.</p>
+</div>
+
+<!-- ─────────────────────────────── VII. THREE FAILURE MODES ─────────────────────────────── -->
+<div class="section">
+  <div class="section-title"><span class="section-num">VII.</span>Three Failure Modes — How the Wall Breaks</div>
 
   <div class="stage-block red">
     <div class="stage-block-label">Failure Mode 1 — Spread Blowout</div>
@@ -654,9 +814,9 @@
   </div>
 </div>
 
-<!-- ─────────────────────────────── VI. HISTORICAL ANALOGUES ─────────────────────────────── -->
+<!-- ─────────────────────────────── VIII. HISTORICAL ANALOGUES ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">VI.</span>Historical Analogues — What This Has Looked Like Before</div>
+  <div class="section-title"><span class="section-num">VIII.</span>Historical Analogues — What This Has Looked Like Before</div>
 
   <p>The FABN maturity wall is not unprecedented in structure, even if its current scale is. Three historical episodes illuminate how short-duration wholesale funding of long-duration illiquid assets fails — and how quickly.</p>
 
@@ -674,9 +834,9 @@
   </div>
 </div>
 
-<!-- ─────────────────────────────── VII. CASCADE TRANSMISSION ─────────────────────────────── -->
+<!-- ─────────────────────────────── IX. CASCADE TRANSMISSION ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">VII.</span>Cascade Transmission — From FABN Stress to Policyholder</div>
+  <div class="section-title"><span class="section-num">IX.</span>Cascade Transmission — From FABN Stress to Policyholder</div>
 
   <p>The following sequence maps how a FABN rollover difficulty at one major PE-owned insurer propagates through the financial system to ultimately reach policyholders, pension funds, and the broader private credit market.</p>
 
@@ -751,9 +911,76 @@
   </table>
 </div>
 
-<!-- ─────────────────────────────── VIII. BERMUDA REINSURANCE AMPLIFIER ─────────────────────────────── -->
+<!-- ─────────────────────────────── X. ANNUITY FLYWHEEL IN REVERSE ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">VIII.</span>The Bermuda Amplifier — How Reinsurance Makes FABN Stress Worse</div>
+  <div class="section-title"><span class="section-num">X.</span>The Annuity Flywheel in Reverse — The Compounding Squeeze Most Analysts Miss</div>
+
+  <p>The PE-insurance business model is built on a flywheel: annuity premiums flow in → PE firm deploys them into affiliated credit products → the spread earned funds policyholder crediting rates → strong crediting rates attract more annuity buyers → premiums continue to flow in. This virtuous cycle also serves a mechanical function that is rarely made explicit: annuity inflows are doing double duty. They are not only the primary source of new investable capital — they are also passively offsetting FABN maturities by continuously replenishing the general account. When the flywheel reverses, both functions fail simultaneously.</p>
+
+  <div class="sub-heading">The Two Jobs Annuity Inflows Are Doing</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Function</th>
+        <th>Normal Market</th>
+        <th>Under Stress</th>
+        <th>Consequence of Failure</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-name">Capital supply for alternatives deployment</td>
+        <td>New premiums provide continuous fresh capital for PE affiliate to deploy into new private credit deals</td>
+        <td>Inflows slow or stop; PE affiliate loses its primary capital source; AUM growth stalls</td>
+        <td>Management fee revenue to PE firm falls; investment pipeline stalls; existing portfolio must generate returns without new capital diversification</td>
+      </tr>
+      <tr>
+        <td class="td-name">Passive FABN maturity offset</td>
+        <td>$X billion in new annuity premiums each quarter naturally offsets $Y billion in FABN maturities; net refinancing requirement is reduced</td>
+        <td>Inflows stop; full $Y billion in FABN maturities must be refinanced through new FABN issuance — no offset</td>
+        <td>Gross refinancing burden becomes 100% of maturing FABN; insurer must issue new paper at stressed spreads to replace every dollar of maturing notes</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-heading">What Triggers the Reversal — Four Mechanisms</div>
+
+  <div class="stage-block amber">
+    <div class="stage-block-label">Trigger 1 — Rate Cuts Reduce Fixed Annuity Attractiveness</div>
+    <div class="stage-block-title">The Benign Scenario Contains Its Own Demand Headwind</div>
+    <div class="stage-block-body">The memo's benign scenario requires the Fed to cut rates 100–150 bps — which reduces FABN funding costs. But the same rate cuts reduce the crediting rates PE-owned insurers can offer on fixed indexed annuities (FIAs) and multi-year guaranteed annuities (MYGAs). At 5.25% Fed funds, a MYGA offering 5.0% guaranteed is genuinely attractive. At 3.75% Fed funds, the same product offers 3.5%—competing directly with online savings accounts and short-duration bond ETFs. Annuity demand is highly rate-elastic; a 150 bps rate decline historically reduces MYGA and FIA sales by 20–35%. The same policy move that eases FABN funding costs simultaneously reduces annuity inflows — the offset mechanism weakens precisely as the insurer needs it most.</div>
+  </div>
+
+  <div class="stage-block amber">
+    <div class="stage-block-label">Trigger 2 — Advisor Channel Pullback</div>
+    <div class="stage-block-title">Financial Advisors Are the Distribution Bottleneck</div>
+    <div class="stage-block-body">PE-owned insurers distribute fixed annuities almost entirely through independent financial advisors and broker-dealer networks. Advisors are highly attuned to counterparty risk perception — not necessarily financial analysis, but headline risk and professional liability. If a major PE-insurer becomes a negative headline (FABN rollover difficulty, rating review, regulatory examination), advisors will pause or redirect annuity recommendations to competing products without any formal directive. Advisor channel sentiment shifts are not gradual — they tend to move in coordination as compliance departments issue guidance simultaneously. A 3-month advisor pause at Athene would remove an estimated $8–15B in quarterly inflows.</div>
+  </div>
+
+  <div class="stage-block red">
+    <div class="stage-block-label">Trigger 3 — Surrender Wave</div>
+    <div class="stage-block-title">Existing Policyholders Begin Exiting — Surrender Charges Are the Only Friction</div>
+    <div class="stage-block-body">Fixed and indexed annuities carry surrender charge periods — typically 5–10 years — during which policyholders pay a penalty (often 7–10% of contract value in year 1, declining to 0% at the end of the surrender period) for early withdrawal. Once contracts enter the free-surrender window — or in any scenario where policyholders decide the surrender charge is worth paying — exits become a drain on the general account. If 5% of Athene's ~$300B general account surrenders in a 12-month window, that is $15B in cash outflows. Combined with FABN maturities, the simultaneous cash demand could exceed the insurer's liquid asset buffer by a significant margin.</div>
+  </div>
+
+  <div class="stage-block red">
+    <div class="stage-block-label">Trigger 4 — Pension Risk Transfer (PRT) Pause</div>
+    <div class="stage-block-title">Institutional Trustees Will Not Award PRT Business to a Distressed Counterparty</div>
+    <div class="stage-block-body">Athene is a leading provider of pension risk transfer (PRT) transactions — group annuity contracts in which corporate pension sponsors transfer their defined-benefit obligations to an insurer. Athene has executed PRT transactions with AT&amp;T, GE, Lumen Technologies, and dozens of other major plan sponsors. PRT contracts are awarded through a competitive bidding process in which the plan sponsor's fiduciary counsel is required to assess the insurer's financial strength. If Athene's rating comes under pressure or regulatory scrutiny becomes public, fiduciary counsel will recommend against awarding PRT contracts — immediately cutting off a critical source of large, lumpy capital inflows (individual PRT transactions can range from $500M to $8B+).</div>
+  </div>
+
+  <div class="pull-quote">
+    The compounding squeeze does not require a single catastrophic event. It requires four things to happen simultaneously: rates fall (reducing FIA demand), one headline breaks (pausing advisor distribution), some contracts enter free-surrender (adding cash drain), and a PRT pipeline dries up (removing the large-transaction offset). All four can occur in a 6-month window, before any formal FABN rollover event, and before any regulatory intervention. By the time the FABN maturity wall becomes a headline, the flywheel may already have stopped.
+  </div>
+
+  <div class="sub-heading">Quantifying the Flywheel Reversal</div>
+  <p>Athene's annuity inflows have been running at approximately $30–40B per quarter in peak periods. If inflows fall to $5–10B per quarter in a stress scenario (a 75–80% reduction, consistent with advisor channel disruption and reduced FIA demand), the passive FABN maturity offset shrinks from $30B+ per quarter to $5–10B per quarter. Against a 2027 maturity wall of ~$70B, this means the insurer must actively refinance approximately $60–65B in new FABN paper in a single year — in a market where buyers are already cautious. In 2023 and 2024, when the flywheel was running at full speed and markets were benign, the same refinancing task required $64B in new issuance over twelve months. Doing it again in a stressed market, with a reduced inflow offset and institutional buyer hesitation, is a categorically different challenge.</p>
+</div>
+
+<!-- ─────────────────────────────── XI. BERMUDA REINSURANCE AMPLIFIER ─────────────────────────────── -->
+<div class="section">
+  <div class="section-title"><span class="section-num">XI.</span>The Bermuda Amplifier — How Reinsurance Makes FABN Stress Worse</div>
 
   <p>FABNs do not exist in isolation. They interact with a second structural vulnerability — Bermuda reinsurance self-cession — in a way that amplifies both risks.</p>
 
@@ -766,9 +993,9 @@
   <p>AG55 (Actuarial Guideline 55), the first NAIC standard requiring systematic reinsurance collectability testing, became effective in August 2025. It is the first meaningful regulatory intervention in the Bermuda cession structure. However, it does not prohibit captive reinsurance — it only requires that the reinsurance be demonstrably collectible. Whether $192B in self-ceded Bermuda reserves passes the AG55 collectability test under a stress scenario is one of the most consequential unresolved regulatory questions in insurance markets today.</p>
 </div>
 
-<!-- ─────────────────────────────── IX. FABN vs FHLB ADVANCES ─────────────────────────────── -->
+<!-- ─────────────────────────────── XII. FABN vs FHLB ADVANCES ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">IX.</span>FABN vs. FHLB Advances — The Second Liquidity Ladder</div>
+  <div class="section-title"><span class="section-num">XII.</span>FABN vs. FHLB Advances — The Second Liquidity Ladder</div>
 
   <p>In addition to FABNs, PE-owned insurers have dramatically expanded their use of Federal Home Loan Bank (FHLB) advances — collateralized borrowings from FHLB member banks, available to insurance company members at rates tied to SOFR. FHLB advances function as a secondary wholesale funding source, typically at shorter duration than FABNs (overnight to 1 year).</p>
 
@@ -784,9 +1011,9 @@
   </div>
 </div>
 
-<!-- ─────────────────────────────── X. REGULATORY BLIND SPOTS ─────────────────────────────── -->
+<!-- ─────────────────────────────── XIII. REGULATORY BLIND SPOTS ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">X.</span>Regulatory Blind Spots — What the NAIC Is Not Measuring</div>
+  <div class="section-title"><span class="section-num">XIII.</span>Regulatory Blind Spots — What the NAIC Is Not Measuring</div>
 
   <p>The NAIC Risk-Based Capital framework was designed in the 1990s for traditional insurance business models: long-duration liabilities (life insurance policies, annuities) funded by investment-grade bond portfolios. The framework has not been materially updated to account for:</p>
 
@@ -836,9 +1063,49 @@
   <p>The NAIC's Financial Analysis Working Group (FAWG) and its E Committee have flagged PE-owned insurer business models for enhanced review since 2022. The NAIC adopted a new "PE-owned insurer" regulatory framework in 2023 requiring enhanced pre-acquisition review, but this applies only to new acquisitions — it does not retroactively impose new requirements on existing platforms. The existing platforms — Athene, Global Atlantic, F&amp;G, AEL, Fortitude Re — operate under the pre-2023 regulatory framework indefinitely.</p>
 </div>
 
-<!-- ─────────────────────────────── XI. TIMING AND CATALYSTS ─────────────────────────────── -->
+<!-- ─────────────────────────────── XIV. NO GOVERNMENT BACKSTOP ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">XI.</span>Timing and Catalysts — What Accelerates the Timeline</div>
+  <div class="section-title"><span class="section-num">XIV.</span>No Government Backstop — The Protection Gap and Why This Time Is Different</div>
+
+  <p>The assumption embedded in most assessments of PE-owned insurer risk is that if a major platform faces distress, government intervention will materialize — as it did for AIG in 2008, as it did for prime MMFs in 2020, as it did for banks in 2023. This assumption is wrong in its specifics and dangerous in its confidence. Life insurance companies have no access to the Federal Reserve's discount window. They cannot borrow from the Fed. They cannot participate in emergency repo facilities. They have no equivalent of the FDIC guaranteeing their liabilities. What they have is a state guaranty association system that was designed for the failure of a single mid-size insurer — not for the simultaneous distress of five platforms holding a combined $1.5+ trillion in general account assets.</p>
+
+  <div class="sub-heading">The Federal Reserve Cannot Intervene Automatically</div>
+  <p>The Federal Reserve's authority to lend to non-bank entities is governed by Section 13(3) of the Federal Reserve Act, which permits emergency lending to "any individual, partnership, or corporation" in "unusual and exigent circumstances" — but only with the approval of the Treasury Secretary, only when the borrower is "unable to secure adequate credit accommodations from other banking institutions," and only against "satisfactory collateral." The 2010 Dodd-Frank Act added a further requirement: emergency lending programs must be "broad-based" (available to multiple entities) rather than targeted at a single institution. This means the Fed cannot do for Athene in 2027 what it did for AIG in 2008 — AIG received a single-institution emergency credit facility, which is explicitly prohibited under current law. Any Fed intervention in a PE-insurer FABN crisis would need to be structured as a broad-based facility (analogous to the 2020 MMLF or the 2023 Bank Term Funding Program), would require Treasury co-sign, and would face congressional scrutiny in a political environment that is significantly more hostile to financial sector bailouts than 2008 or 2020.</p>
+
+  <div class="sub-heading">State Guaranty Associations — The Real Backstop — and Its Limits</div>
+  <p>The actual backstop for annuity policyholders is the state insurance guaranty association system. Every state has a life and health guaranty association that provides coverage to policyholders of insolvent insurers domiciled in that state. The coverage limits and funding mechanisms vary by state, but the common structure is:</p>
+
+  <ul>
+    <li><strong>Coverage limit:</strong> $250,000–$500,000 per policyholder per insurer in most states (Iowa, where Athene's operating subsidiary is domiciled, provides $250,000 in annuity coverage)</li>
+    <li><strong>Funding mechanism:</strong> Post-insolvency assessment — member insurers are assessed after a failure occurs, in proportion to their premium volume. There is no pre-funded reserve pool equivalent to the FDIC's Deposit Insurance Fund.</li>
+    <li><strong>Maximum annual assessment:</strong> Typically capped at 1–2% of annual premium volume for any member insurer — meaning that even if the entire industry is assessed at maximum capacity, the total annual payout capacity is a small fraction of what would be required for a major platform failure.</li>
+  </ul>
+
+  <div class="alert-box">
+    <strong>The Protection Gap at Scale:</strong> Athene alone has approximately $300B in general account liabilities. Iowa's guaranty association covers $250,000 per policyholder. If the average annuity policyholder has $150,000 in contract value (a conservative estimate for the PE-insurer demographic, which skews toward wealthier retirees), full guaranty coverage would apply. But if 10% of policyholders have annuity values exceeding $250,000, the unguaranteed exposure could exceed $30B — borne entirely by those policyholders with no institutional recourse. The assessment funding mechanism, even at maximum capacity across all 50 states, cannot plausibly cover a $30B+ shortfall. The last time the guaranty system faced a major stress event (Executive Life, 1991; Confederation Life, 1994) the failures were measured in the low billions. No scenario planning for a $100B+ platform failure has been publicly conducted by any state guaranty association.
+  </div>
+
+  <div class="sub-heading">The SIFI Designation Gap</div>
+  <p>Following the 2008 financial crisis, the Financial Stability Oversight Council (FSOC) was empowered to designate non-bank financial institutions as Systemically Important Financial Institutions (SIFIs), subjecting them to enhanced prudential standards and Fed supervision. MetLife was designated in 2014 — and fought the designation in court, winning in 2016. Following MetLife's successful legal challenge, FSOC effectively stopped designating non-bank SIFIs. Athene, Global Atlantic, F&amp;G, AEL, and Fortitude Re — collectively holding ~$1.5 trillion in assets — are not SIFI-designated. They are supervised only by state insurance regulators. The federal government has no standing regulatory relationship with these entities and no pre-existing emergency authority framework for their distress.</p>
+
+  <div class="sub-heading">What Government Intervention Would Actually Look Like</div>
+  <p>If a major PE-owned insurer faced FABN rollover failure, the realistic government response sequence would be:</p>
+
+  <ol>
+    <li><strong>State regulator places insurer under supervision</strong> — the state insurance commissioner (Iowa DOI for Athene) initiates an examination, issues a corrective order, or places the insurer into "rehabilitation" (the insurance equivalent of Chapter 11). This process can take 6–24 months from initiation to resolution.</li>
+    <li><strong>FSOC convenes emergency session</strong> — designates the situation as a potential systemic risk, triggering enhanced monitoring but no direct intervention authority.</li>
+    <li><strong>Congress debates emergency legislation</strong> — any meaningful federal backstop (analogous to TARP or an FDIC-style guaranty extension) would require new legislation. In the current political environment, passage would be uncertain and slow. Negotiations over the 2008 TARP took two weeks and initially failed a House vote.</li>
+    <li><strong>Fed structures a broad-based facility</strong> — if Treasury concurs and circumstances meet the legal threshold, the Fed could establish an emergency FABN purchase facility. This would require legal review, facility design, and market communication — a minimum of 4–8 weeks from decision to operation.</li>
+  </ol>
+
+  <div class="pull-quote">
+    In the intervening period — between the onset of FABN rollover stress and any government response — policyholders, prime MMFs, and the private credit market would be operating without a backstop. The 2008 AIG intervention took 48 hours. The 2020 MMLF took two weeks. A PE-insurer FABN crisis intervention would take months. The duration of the unprotected window is the systemic risk.
+  </div>
+</div>
+
+<!-- ─────────────────────────────── XV. TIMING AND CATALYSTS ─────────────────────────────── -->
+<div class="section">
+  <div class="section-title"><span class="section-num">XV.</span>Timing and Catalysts — What Accelerates the Timeline</div>
 
   <p>The FABN maturity wall is a structural risk with a 24–36 month refinancing window. It does not require a single triggering event — it is the accumulation of refinancing pressure as the outstanding book rolls over. However, several catalysts could materially accelerate the timeline or increase severity:</p>
 
@@ -867,9 +1134,9 @@
   </div>
 </div>
 
-<!-- ─────────────────────────────── XII. MARKET POSITIONING ─────────────────────────────── -->
+<!-- ─────────────────────────────── XVI. MARKET POSITIONING ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">XII.</span>Market Positioning — How to Sit Ahead of This</div>
+  <div class="section-title"><span class="section-num">XVI.</span>Market Positioning — How to Sit Ahead of This</div>
 
   <p>The FABN maturity wall creates asymmetric opportunities across several asset classes. The timing is uncertain — this is a 2026–2028 structural risk, not a 2026-Q2 event — but positioning now captures the most convexity as the wall approaches.</p>
 
@@ -910,9 +1177,9 @@
   </div>
 </div>
 
-<!-- ─────────────────────────────── XIII. BENIGN SCENARIO ─────────────────────────────── -->
+<!-- ─────────────────────────────── XVII. BENIGN SCENARIO ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">XIII.</span>Benign Scenario — What Would Need to Go Right</div>
+  <div class="section-title"><span class="section-num">XVII.</span>Benign Scenario — What Would Need to Go Right</div>
 
   <p>The maturity wall is a structural risk — it does not guarantee a crisis. The following conditions, if sustained simultaneously, would allow PE-owned insurers to navigate the 2026–2028 refinancing window without systemic disruption:</p>
 
@@ -929,9 +1196,9 @@
   </div>
 </div>
 
-<!-- ─────────────────────────────── XIV. INTELLIGENCE FRAMEWORK ─────────────────────────────── -->
+<!-- ─────────────────────────────── XVIII. INTELLIGENCE FRAMEWORK ─────────────────────────────── -->
 <div class="section">
-  <div class="section-title"><span class="section-num">XIV.</span>Primary Source Intelligence Framework — What to Track</div>
+  <div class="section-title"><span class="section-num">XVIII.</span>Primary Source Intelligence Framework — What to Track</div>
 
   <p>The following data sources provide the earliest available signal on FABN market conditions. Monitor in the order listed — earlier signals allow more time to establish positions before risk is priced.</p>
 
